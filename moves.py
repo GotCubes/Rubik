@@ -2,6 +2,7 @@
 
 import numpy as np
 
+# Translate the view of puz by num faces.
 def translate(puz, num):
     puz[3] = np.roll(puz[3], 3 * num)
     puz[4] = np.roll(puz[4], 3 * num)
