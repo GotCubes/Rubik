@@ -361,6 +361,111 @@ class Cube:
         elif self.puz[2, 5] == "G" and self.puz[3, 6] == "R" and self.puz[3, 5] == "Y":
             self.execute([Fp, Up, F])
 
+    def mEdges(self):
+        # Orange / Green edge.
+        if self.puz[4, 2] == "G" and self.puz[4, 3] == "O":
+            self.execute([L, U, L, U, L, Up, Lp, Up, Lp, U, Fp, Up, Fp, Up, Fp, U, F, U, F])
+        elif self.puz[4, 0] == "O" and self.puz[4, 11] == "G":
+            self.execute([B, U, B, U, B, Up, Bp, Up, Bp, Fp, Up, Fp, Up, Fp, U, F, U, F])
+        elif self.puz[4, 0] == "G" and self.puz[4, 11] == "O":
+            self.execute([B, U, B, U, B, Up, Bp, Up, Bp, U, L, U, L, U, L, Up, Lp, Up, Lp])
+        elif self.puz[4, 8] == "O" and self.puz[4, 9] == "G":
+            self.execute([R, U, R, U, R, Up, Rp, Up, Rp, L, U, L, U, L, Up, Lp, Up, Lp])
+        elif self.puz[4, 8] == "G" and self.puz[4, 9] == "O":
+            self.execute([R, U, R, U, R, Up, Rp, Up, Rp, Up, Fp, Up, Fp, Up, Fp, U, F, U, F])
+        elif self.puz[4, 5] == "O" and self.puz[4, 6] == "G":
+            self.execute([Rp, Up, Rp, Up, Rp, U, R, U, R, Up, Fp, Up, Fp, Up, Fp, U, F, U, F])
+        elif self.puz[4, 5] == "G" and self.puz[4, 6] == "O":
+            self.execute([Rp, Up, Rp, Up, Rp, U, R, U, R, L, U, L, U, L, Up, Lp, Up, Lp])
+        elif self.puz[2, 4] == "O" and self.puz[3, 4] == "G":
+            self.execute([Fp, Up, Fp, Up, Fp, U, F, U, F])
+        elif self.puz[2, 4] == "G" and self.puz[3, 4] == "O":
+            self.execute([U, L, U, L, U, L, Up, Lp, Up, Lp])
+        elif self.puz[1, 3] == "O" and self.puz[3, 1] == "G":
+            self.execute([Up, Fp, Up, Fp, Up, Fp, U, F, U, F])
+        elif self.puz[1, 3] == "G" and self.puz[3, 1] == "O":
+            self.execute([L, U, L, U, L, Up, Lp, Up, Lp])
+        elif self.puz[0, 4] == "O" and self.puz[3, 10] == "G":
+            self.execute([U2, Fp, Up, Fp, Up, Fp, U, F, U, F])
+        elif self.puz[0, 4] == "G" and self.puz[3, 10] == "O":
+            self.execute([Up, L, U, L, U, L, Up, Lp, Up, Lp])
+        elif self.puz[1, 5] == "O" and self.puz[3, 7] == "G":
+            self.execute([U, Fp, Up, Fp, Up, Fp, U, F, U, F])
+        elif self.puz[1, 5] == "G" and self.puz[3, 7] == "O":
+            self.execute([U2, L, U, L, U, L, Up, Lp, Up, Lp])
+
+        # Blue / Orange edge.
+        if self.puz[4, 0] == "B" and self.puz[4, 11] == "O":
+            self.execute([B, U, B, U, B, Up, Bp, Up, Bp, U, Lp, Up, Lp, Up, Lp, U, L, U, L])
+        elif self.puz[4, 8] == "B" and self.puz[4, 9] == "O":
+            self.execute([R, U, R, U, R, Up, Rp, Up, Rp, U, B, U, B, U, B, Up, Bp, Up, Bp])
+        elif self.puz[4, 8] == "O" and self.puz[4, 9] == "B":
+            self.execute([R, U, R, U, R, Up, Rp, Up, Rp, Lp, Up, Lp, Up, Lp, U, L, U, L])
+        elif self.puz[4, 5] == "B" and self.puz[4, 6] == "O":
+            self.execute([Rp, Up, Rp, Up, Rp, U, R, U, R, Lp, Up, Lp, Up, Lp, U, L, U, L])
+        elif self.puz[4, 5] == "O" and self.puz[4, 6] == "B":
+            self.execute([Rp, Up, Rp, Up, Rp, U, R, U, R, U, B, U, B, U, B, Up, Bp, Up, Bp])
+        elif self.puz[2, 4] == "B" and self.puz[3, 4] == "O":
+            self.execute([U, Lp, Up, Lp, Up, Lp, U, L, U, L])
+        elif self.puz[2, 4] == "O" and self.puz[3, 4] == "B":
+            self.execute([U2, B, U, B, U, B, Up, Bp, Up, Bp])
+        elif self.puz[1, 3] == "B" and self.puz[3, 1] == "O":
+            self.execute([Lp, Up, Lp, Up, Lp, U, L, U, L])
+        elif self.puz[1, 3] == "O" and self.puz[3, 1] == "B":
+            self.execute([U, B, U, B, U, B, Up, Bp, Up, Bp])
+        elif self.puz[0, 4] == "B" and self.puz[3, 10] == "O":
+            self.execute([Up, Lp, Up, Lp, Up, Lp, U, L, U, L])
+        elif self.puz[0, 4] == "O" and self.puz[3, 10] == "B":
+            self.execute([B, U, B, U, B, Up, Bp, Up, Bp])
+        elif self.puz[1, 5] == "B" and self.puz[3, 7] == "O":
+            self.execute([U2, Lp, Up, Lp, Up, Lp, U, L, U, L])
+        elif self.puz[1, 5] == "O" and self.puz[3, 7] == "B":
+            self.execute([Up, B, U, B, U, B, Up, Bp, Up, Bp])
+
+        # Red / Blue edge.
+        if self.puz[4, 8] == "B" and self.puz[4, 9] == "R":
+            self.execute([R, U, R, U, R, Up, Rp, Up, Rp, U, Bp, Up, Bp, Up, Bp, U, B, U, B])
+        elif self.puz[4, 5] == "R" and self.puz[4, 6] == "B":
+            self.execute([F, U, F, U, F, Up, Fp, Up, Fp, U, R, U, R, U, R, Up, Rp, Up, Rp])
+        elif self.puz[4, 5] == "B" and self.puz[4, 6] == "R":
+            self.execute([Rp, Up, Rp, Up, Rp, U, R, U, R, U2, R, U, R, U, R, Up, Rp, Up, Rp])
+        elif self.puz[2, 4] == "R" and self.puz[3, 4] == "B":
+            self.execute([U2, Bp, Up, Bp, Up, Bp, U, B, U, B])
+        elif self.puz[2, 4] == "B" and self.puz[3, 4] == "R":
+            self.execute([Up, R, U, R, U, R, Up, Rp, Up, Rp])
+        elif self.puz[1, 3] == "R" and self.puz[3, 1] == "B":
+            self.execute([U, Bp, Up, Bp, Up, Bp, U, B, U, B])
+        elif self.puz[1, 3] == "B" and self.puz[3, 1] == "R":
+            self.execute([U2, R, U, R, U, R, Up, Rp, Up, Rp])
+        elif self.puz[0, 4] == "R" and self.puz[3, 10] == "B":
+            self.execute([Bp, Up, Bp, Up, Bp, U, B, U, B])
+        elif self.puz[0, 4] == "B" and self.puz[3, 10] == "R":
+            self.execute([U, R, U, R, U, R, Up, Rp, Up, Rp])
+        elif self.puz[1, 5] == "R" and self.puz[3, 7] == "B":
+            self.execute([Up, Bp, Up, Bp, Up, Bp, U, B, U, B])
+        elif self.puz[1, 5] == "B" and self.puz[3, 7] == "R":
+            self.execute([R, U, R, U, R, Up, Rp, Up, Rp])
+
+        # Green / Red edge.
+        if self.puz[4, 5] == "R" and self.puz[4, 6] == "G":
+            self.execute([Rp, Up, Rp, Up, Rp, U, R, U, R, Up, F, U, F, U, F, Up, Fp, Up, Fp])
+        elif self.puz[2, 4] == "R" and self.puz[3, 4] == "G":
+            self.execute([F, U, F, U, F, Up, Fp, Up, Fp])
+        elif self.puz[2, 4] == "G" and self.puz[3, 4] == "R":
+            self.execute([Up, Rp, Up, Rp, Up, Rp, U, R, U, R])
+        elif self.puz[1, 3] == "R" and self.puz[3, 1] == "G":
+            self.execute([Up, F, U, F, U, F, Up, Fp, Up, Fp])
+        elif self.puz[1, 3] == "G" and self.puz[3, 1] == "R":
+            self.execute([U2, Rp, Up, Rp, Up, Rp, U, R, U, R])
+        elif self.puz[0, 4] == "R" and self.puz[3, 10] == "G":
+            self.execute([U2, F, U, F, U, F, Up, Fp, Up, Fp])
+        elif self.puz[0, 4] == "G" and self.puz[3, 10] == "R":
+            self.execute([U, Rp, Up, Rp, Up, Rp, U, R, U, R])
+        elif self.puz[1, 5] == "R" and self.puz[3, 7] == "G":
+            self.execute([U, F, U, F, U, F, Up, Fp, Up, Fp])
+        elif self.puz[1, 5] == "G" and self.puz[3, 7] == "R":
+            self.execute([Rp, Up, Rp, Up, Rp, U, R, U, R])
+
 if __name__ == "__main__":
     cube = Cube()
     checkerboard = [U2, D2, R2, L2, F2, B2]
@@ -370,4 +475,5 @@ if __name__ == "__main__":
         cube.scramble()
         cube.bEdges()
         cube.bCorners()
+        cube.mEdges()
         print(cube)
