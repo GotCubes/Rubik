@@ -497,6 +497,60 @@ class Cube:
             self.execute([F, U, R, Up, Rp, Fp])
         else: self.execute([L, U, F, Up, Fp, Lp])
 
+    def OLL(self):
+        if self.puz[3, 0] == "W" and self.puz[3, 2] == "W" and self.puz[3, 5] == "W" and self.puz[3, 9] == "W":
+            self.execute([R, U2, R2, Up, R2, Up, R2, U2, R])
+        elif self.puz[3, 9] == "W" and self.puz[3, 11] == "W" and self.puz[3, 2] == "W" and self.puz[3, 6] == "W":
+            self.execute([F, U2, F2, Up, F2, Up, F2, U2, F])
+        elif self.puz[3, 6] == "W" and self.puz[3, 8] == "W" and self.puz[3, 3] == "W" and self.puz[3, 11] == "W":
+            self.execute([L, U2, L2, Up, L2, Up, L2, U2, L])
+        elif self.puz[3, 3] == "W" and self.puz[3, 5] == "W" and self.puz[3, 0] == "W" and self.puz[3, 8] == "W":
+            self.execute([B, U2, B2, Up, B2, Up, B2, U2, B])
+        elif self.puz[3, 3] == "W" and self.puz[3, 5] == "W" and self.puz[3, 9] == "W" and self.puz[3, 11] == "W":
+            self.execute([B, U, Bp, U, B, Up, Bp, U, B, U2, Bp])
+        elif self.puz[3, 0] == "W" and self.puz[3, 2] == "W" and self.puz[3, 6] == "W" and self.puz[3, 8] == "W":
+            self.execute([R, U, Rp, U, R, Up, Rp, U, R, U2, Rp])
+        elif self.puz[3, 5] == "W" and self.puz[3, 8] == "W" and self.puz[3, 11] == "W":
+            self.execute([R, U, Rp, U, R, U2, Rp])
+        elif self.puz[3, 8] == "W" and self.puz[3, 11] == "W" and self.puz[3, 2] == "W":
+            self.execute([B, U, Bp, U, B, U2, Bp])
+        elif self.puz[3, 11] == "W" and self.puz[3, 2] == "W" and self.puz[3, 5] == "W":
+            self.execute([L, U, Lp, U, L, U2, Lp])
+        elif self.puz[3, 2] == "W" and self.puz[3, 5] == "W" and self.puz[3, 8] == "W":
+            self.execute([F, U, Fp, U, F, U2, Fp])
+        elif self.puz[3, 3] == "W" and self.puz[3, 6] == "W" and self.puz[3, 9] == "W":
+            self.execute([Rp, Up, R, Up, Rp, U2, R])
+        elif self.puz[3, 6] == "W" and self.puz[3, 9] == "W" and self.puz[3, 0] == "W":
+            self.execute([Bp, Up, B, Up, Bp, U2, B])
+        elif self.puz[3, 9] == "W" and self.puz[3, 0] == "W" and self.puz[3, 3] == "W":
+            self.execute([Lp, Up, L, Up, Lp, U2, L])
+        elif self.puz[3, 0] == "W" and self.puz[3, 3] == "W" and self.puz[3, 6] == "W":
+            self.execute([Fp, Up, F, Up, Fp, U2, F])
+        elif self.puz[3, 5] == "W" and self.puz[3, 9] == "W":
+            self.execute([Rp, Fp, L, F, R, Fp, Lp, F])
+        elif self.puz[3, 8] == "W" and self.puz[3, 0] == "W":
+            self.execute([Bp, Rp, F, R, B, Rp, Fp, R])
+        elif self.puz[3, 11] == "W" and self.puz[3, 3] == "W":
+            self.execute([Lp, Bp, R, B, L, Bp, Rp, B])
+        elif self.puz[3, 2] == "W" and self.puz[3, 6] == "W":
+            self.execute([Fp, Lp, B, L, F, Lp, Bp, L])
+        elif self.puz[3, 3] == "W" and self.puz[3, 5] == "W":
+            self.execute([R2, D, Rp, U2, R, Dp, Rp, U2, Rp])
+        elif self.puz[3, 6] == "W" and self.puz[3, 8] == "W":
+            self.execute([B2, D, Bp, U2, B, Dp, Bp, U2, Bp])
+        elif self.puz[3, 9] == "W" and self.puz[3, 11] == "W":
+            self.execute([L2, D, Lp, U2, L, Dp, Lp, U2, Lp])
+        elif self.puz[3, 0] == "W" and self.puz[3, 2] == "W":
+            self.execute([F2, D, Fp, U2, F, Dp, Fp, U2, Fp])
+        elif self.puz[3, 2] == "W" and self.puz[3, 9] == "W":
+            self.execute([Rp, Fp, Lp, F, R, Fp, L, F])
+        elif self.puz[3, 5] == "W" and self.puz[3, 0] == "W":
+            self.execute([Bp, Rp, Fp, R, B, Rp, F, R])
+        elif self.puz[3, 8] == "W" and self.puz[3, 3] == "W":
+            self.execute([Lp, Bp, Rp, B, L, Bp, R, B])
+        else: self.execute([Fp, Lp, Bp, L, F, Lp, B, L])
+
+
 if __name__ == "__main__":
     cube = Cube()
     checkerboard = [U2, D2, R2, L2, F2, B2]
@@ -508,4 +562,5 @@ if __name__ == "__main__":
         cube.bCorners()
         cube.mEdges()
         cube.tEdges()
+        cube.OLL()
         print(cube)
