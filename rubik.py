@@ -13,6 +13,7 @@ class Cube:
         self.puz[3:6, 6:9] = 'R'
         self.puz[3:6, 9:12] = 'B'
         self.puz[6:9, 3:6] = 'Y'
+        self.scramble = []
         self.solution = []
         self.solLen = 0
 
@@ -26,10 +27,14 @@ class Cube:
 
         return ret
 
-    def scramble(self):
+    def mix(self):
         moves = [U, Up, U2, D, Dp, D2, R, Rp, R2, L, Lp, L2, F, Fp, F2, B, Bp, B2]
-        for i in range(100):
-            random.choice(moves)(self.puz)
+        self.scramble = []
+        choice = random.choice(moves)
+        for i in range(20):
+            self.scramble.append(choice.__name__)
+            choice = random.choice([move for move in moves if move.__name__[0] != choice.__name__[0]])
+            choice(self.puz)
 
     def execute(self, algorithm):
         self.solution.extend([move.__name__ for move in algorithm])
@@ -52,12 +57,12 @@ if __name__ == "__main__":
     moves = []
 
     for i in range(100):
-        cube.scramble()
+        cube.mix()
         start = time.time()
         cube.solve()
         end = time.time()
         times.append(end - start)
         moves.append(cube.solLen)
-        print("Solved a cube in {} moves, in {} seconds.".format(cube.solLen, end - start))
+        print("Solved cube {} in {} moves, in {} seconds.".format(i + 1, cube.solLen, end - start))
 
-    print("Solved 100 cubes in an average of {} moves, in an average time of {} seconds.".format(sum(moves) / len(moves), sum(times) / len(times)))
+    print("Solved {} cubes in an average of {} moves, in an average time of {} seconds.".format(i + 1, sum(moves) / len(moves), sum(times) / len(times)))
