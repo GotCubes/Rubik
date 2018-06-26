@@ -2,13 +2,14 @@
 
 import numpy as np
 
-# Translate the view of puz by num faces.
+# Translate the view of puz along num faces.
 def translate(puz, num):
     puz[3] = np.roll(puz[3], 3 * num)
     puz[4] = np.roll(puz[4], 3 * num)
     puz[5] = np.roll(puz[5], 3 * num)
     puz[0:3, 3:6] = np.rot90(puz[0:3, 3:6], num)
     puz[6:9, 3:6] = np.rot90(puz[6:9, 3:6], -num)
+    return puz
 
 # Up face operations
 def U(puz):
