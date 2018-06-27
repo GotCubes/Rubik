@@ -59,10 +59,8 @@ class RubikApp(QMainWindow, Ui_MainWindow):
         self.cube.solution.extend([move.__name__ for move in algorithm])
         self.cube.solLen += len(algorithm)
         for move in algorithm:
-            self.mover = MoverThread(self.cube.puz, move)
-            self.connect(self.mover, SIGNAL("finished()"), self.update)
-            self.mover.start()
-            self.mover.wait()
+            move(self.cube.puz)
+            self.update()
 
     def solve(self):
         self.cube.solution = []
@@ -72,20 +70,6 @@ class RubikApp(QMainWindow, Ui_MainWindow):
         mEdges(self)
         OLL(self)
         PLL(self)
-
-class MoverThread(QThread):
-    def __init__(self, puzzle, move):
-        QThread.__init__(self)
-        self.puz = puzzle
-        self.move = move
-
-    def __del__(self):
-        self.wait()
-
-    def run(self):
-        print("Here")
-        self.move(self.puz)
-        self.msleep(100)
 
 if __name__ == "__main__":
     currentApp = QApplication(sys.argv)
