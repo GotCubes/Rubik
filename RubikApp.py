@@ -44,15 +44,6 @@ class RubikApp(QMainWindow, Ui_MainWindow):
             elif facet == "B": self.facets[i][j].setScene(self.blue)
             elif facet == "Y": self.facets[i][j].setScene(self.yellow)
 
-    def scramble(self):
-        moves = [U, Up, U2, D, Dp, D2, R, Rp, R2, L, Lp, L2, F, Fp, F2, B, Bp, B2]
-        self.cube.scramble = []
-        choice = random.choice(moves)
-        for i in range(20):
-            self.cube.scramble.append(choice)
-            choice = random.choice([move for move in moves if move.__name__[0] != choice.__name__[0]])
-        self.execute(self.cube.scramble)
-
     def execute(self, algorithm):
         self.cube.solution.extend(algorithm)
         self.cube.solLen += len(algorithm)
@@ -61,6 +52,15 @@ class RubikApp(QMainWindow, Ui_MainWindow):
             self.update()
             time.sleep(0.05)
             QApplication.processEvents()
+                
+    def scramble(self):
+        moves = [U, Up, U2, D, Dp, D2, R, Rp, R2, L, Lp, L2, F, Fp, F2, B, Bp, B2]
+        self.cube.scramble = []
+        choice = random.choice(moves)
+        for i in range(20):
+            self.cube.scramble.append(choice)
+            choice = random.choice([move for move in moves if move.__name__[0] != choice.__name__[0]])
+        self.execute(self.cube.scramble)
 
     def solve(self):
         self.cube.solution = []
@@ -76,4 +76,4 @@ if __name__ == "__main__":
     currentForm = RubikApp()
 
     currentForm.show()
-currentApp.exec_()
+    currentApp.exec_()
