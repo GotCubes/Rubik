@@ -12,15 +12,23 @@ class RubikApp(QMainWindow, Ui_MainWindow):
         super(RubikApp, self).__init__(parent)
         self.setupUi(self)
 
+        # Initialize cube.
+        self.cube = Cube()
+        self.speed = 100 - self.sliSpeed.value()
+        self.buttons = [self.btnU, self.btnUp, self.btnU2,
+                        self.btnD, self.btnDp, self.btnD2,
+                        self.btnL, self.btnLp, self.btnL2,
+                        self.btnR, self.btnRp, self.btnR2,
+                        self.btnF, self.btnFp, self.btnF2,
+                        self.btnB, self.btnBp, self.btnB2]
+        self.moves = [U, Up, U2, D, Dp, D2, L, Lp, L2, R, Rp, R2, F, Fp, F2, B, Bp, B2]
+
         # Define connections.
+        for i in range(18): self.buttons[i].clicked.connect(self.moveHandler(self.moves[i]))
         self.btnScramble.clicked.connect(self.scramble)
         self.btnSolve.clicked.connect(self.solve)
         self.sliSpeed.valueChanged.connect(self.setSpeed)
         self.proDone.hide()
-
-        # Initialize cube.
-        self.cube = Cube()
-        self.speed = 100 - self.sliSpeed.value()
 
         # Initialize facet colors.
         self.white = QGraphicsScene(); self.white.setBackgroundBrush(QColor(255, 255, 255))
@@ -29,6 +37,7 @@ class RubikApp(QMainWindow, Ui_MainWindow):
         self.red = QGraphicsScene(); self.red.setBackgroundBrush(QColor(254, 0, 0))
         self.blue = QGraphicsScene(); self.blue.setBackgroundBrush(QColor(1, 176, 241))
         self.yellow = QGraphicsScene(); self.yellow.setBackgroundBrush(QColor(255, 255, 1))
+        self.black = QGraphicsScene(); self.black.setBackgroundBrush(QColor(0, 0, 0))
 
         # Group facets.
         self.facets = [[0, 0, 0, self.q03, self.q04, self.q05, 0, 0, 0, 0, 0, 0],
@@ -40,7 +49,29 @@ class RubikApp(QMainWindow, Ui_MainWindow):
                        [0, 0, 0, self.q63, self.q64, self.q65, 0, 0, 0, 0, 0, 0],
                        [0, 0, 0, self.q73, self.q74, self.q75, 0, 0, 0, 0, 0, 0],
                        [0, 0, 0, self.q83, self.q84, self.q85, 0, 0, 0, 0, 0, 0]]
+
+        # Render colors.
+        self.background = [self.qB1, self.qB2, self.qB3]
+        for background in self.background:
+            background.setScene(self.black)
+        for row in self.facets:
+            for facet in row:
+                if facet: facet.raise_()
+        self.lines = [self.l1, self.l2, self.l3, self.l4, self.l5, self.l6, self.l7, self.l8, self.l9, self.l10, self.l11, self.l12, self.l13]
+        for line in self.lines:
+            line.raise_()
+        for button in self.buttons:
+            button.raise_()
+        self.btnScramble.raise_()
+        self.btnSolve.raise_()
+        self.sliSpeed.raise_()
         self.update()
+
+    def moveHandler(self, func):
+        def move():
+            func(self.cube.puz)
+            self.update()
+        return move
 
     def setLock(self, op):
         # Disable / Enable relevant widgets.
