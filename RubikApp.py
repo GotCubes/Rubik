@@ -49,17 +49,18 @@ class RubikApp(QMainWindow, Ui_MainWindow):
         self.cube.scramble = []
         choice = random.choice(moves)
         for i in range(20):
-            self.cube.scramble.append(choice.__name__)
+            self.cube.scramble.append(choice)
             choice = random.choice([move for move in moves if move.__name__[0] != choice.__name__[0]])
-            choice(self.cube.puz)
-            self.update()
+        self.execute(self.cube.scramble)
 
     def execute(self, algorithm):
-        self.cube.solution.extend([move.__name__ for move in algorithm])
+        self.cube.solution.extend(algorithm)
         self.cube.solLen += len(algorithm)
         for move in algorithm:
             move(self.cube.puz)
             self.update()
+            time.sleep(0.05)
+            QApplication.processEvents()
 
     def solve(self):
         self.cube.solution = []
@@ -75,4 +76,4 @@ if __name__ == "__main__":
     currentForm = RubikApp()
 
     currentForm.show()
-    currentApp.exec_()
+currentApp.exec_()
