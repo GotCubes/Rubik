@@ -246,7 +246,7 @@ def mEdges(puzzle):
     else: puzzle.execute([Rp, Up, Rp, Up, Rp, U, R, U, R])
 
 
-def OLL(puzzle):
+def tEdgesO(puzzle):
     # Top layer edge orientation.
     if puzzle.cube.puz[2, 4] == "W" and puzzle.cube.puz[1, 3] == "W" and puzzle.cube.puz[0, 4] == "W" and puzzle.cube.puz[1, 5] == "W": pass
     elif puzzle.cube.puz[2, 4] != "W" and puzzle.cube.puz[1, 3] != "W" and puzzle.cube.puz[0, 4] != "W" and puzzle.cube.puz[1, 5] != "W": puzzle.execute([F, R, U, Rp, Up, Fp, B, U, L, Up, Lp, Bp])
@@ -257,6 +257,7 @@ def OLL(puzzle):
     elif puzzle.cube.puz[0, 4] == "W" and puzzle.cube.puz[1, 3] == "W": puzzle.execute([F, U, R, Up, Rp, Fp])
     else: puzzle.execute([L, U, F, Up, Fp, Lp])
 
+def tCornersO(puzzle):
     # Top layer corner orientation.
     if puzzle.cube.puz[0, 3] == "W" and puzzle.cube.puz[0, 5] == "W" and puzzle.cube.puz[2, 3] == "W" and puzzle.cube.puz[2, 5] == "W": pass
     elif puzzle.cube.puz[3, 0] == "W" and puzzle.cube.puz[3, 2] == "W" and puzzle.cube.puz[3, 5] == "W" and puzzle.cube.puz[3, 9] == "W": puzzle.execute([R, U2, R2, Up, R2, Up, R2, U2, R])
@@ -287,7 +288,7 @@ def OLL(puzzle):
     else: puzzle.execute([Fp, Lp, Bp, L, F, Lp, B, L])
 
 
-def PLL(puzzle):
+def tCornersP(puzzle):
     # Top layer corner permutation.
     if puzzle.cube.puz[3, 3] == puzzle.cube.puz[3, 5] and puzzle.cube.puz[3, 6] == puzzle.cube.puz[3, 8] and puzzle.cube.puz[3, 9] == puzzle.cube.puz[3, 11] and puzzle.cube.puz[3, 0] == puzzle.cube.puz[3, 2]: pass
     elif puzzle.cube.puz[3, 3] != puzzle.cube.puz[3, 5] and puzzle.cube.puz[3, 6] != puzzle.cube.puz[3, 8] and puzzle.cube.puz[3, 9] != puzzle.cube.puz[3, 11] and puzzle.cube.puz[3, 0] != puzzle.cube.puz[3, 2]: puzzle.execute([R, Bp, Rp, F, R, B, Rp, Fp, R, B, Rp, F, R, Bp, Rp, Fp])
@@ -296,6 +297,7 @@ def PLL(puzzle):
     elif puzzle.cube.puz[3, 9] == puzzle.cube.puz[3, 11]: puzzle.execute([Rp, F, Rp, B2, R, Fp, Rp, B2, R2])
     else: puzzle.execute([Bp, R, Bp, L2, B, Rp, Bp, L2, B2])
 
+def tEdgesP(puzzle):
     # Top layer edge permutation.
     if puzzle.cube.puz[3, 3] == puzzle.cube.puz[3, 4] and puzzle.cube.puz[3, 6] == puzzle.cube.puz[3, 7] and puzzle.cube.puz[3, 9] == puzzle.cube.puz[3, 10] and puzzle.cube.puz[3, 0] == puzzle.cube.puz[3, 1]: pass
     elif puzzle.cube.puz[3, 9] == puzzle.cube.puz[3, 10] and puzzle.cube.puz[3, 4] == puzzle.cube.puz[3, 6]: puzzle.execute([R, Up, R, U, R, U, R, Up, Rp, Up, R2])
@@ -308,7 +310,7 @@ def PLL(puzzle):
     elif puzzle.cube.puz[3, 6] == puzzle.cube.puz[3, 7] and puzzle.cube.puz[3, 1] == puzzle.cube.puz[3, 11]: puzzle.execute([F2, U, F, U, Fp, Up, Fp, Up, Fp, U, Fp])
     elif puzzle.cube.puz[3, 4] == puzzle.cube.puz[3, 2]: puzzle.execute([Fp, Up, F2, U, F, U, Fp, Up, F, U, F, Up, F, Up, Fp])
     elif puzzle.cube.puz[3, 4] == puzzle.cube.puz[3, 6]: puzzle.execute([Rp, Up, R2, U, R, U, Rp, Up, R, U, R, Up, R, Up, Rp])
-    else: puzzle.execute([R2, U2, R2, U2, R2, U, R2, U2, R2, U2, R2, Up])
+    else: puzzle.execute([R2, U2, R2, U2, R2, U, R2, U2, R2, U2, R2])
 
     # Final alignment.
     if puzzle.cube.puz[3, 4] == "G": pass

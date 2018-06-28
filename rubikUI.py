@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'rubikUI.ui'
 #
-# Created: Wed Jun 27 12:35:02 2018
+# Created: Thu Jun 28 14:06:41 2018
 #      by: PyQt4 UI code generator 4.6.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -177,12 +177,25 @@ class Ui_MainWindow(object):
         self.q73 = QtGui.QGraphicsView(self.centralwidget)
         self.q73.setGeometry(QtCore.QRect(160, 360, 40, 40))
         self.q73.setObjectName("q73")
-        self.btnMix = QtGui.QPushButton(self.centralwidget)
-        self.btnMix.setGeometry(QtCore.QRect(360, 370, 92, 27))
-        self.btnMix.setObjectName("btnMix")
+        self.btnScramble = QtGui.QPushButton(self.centralwidget)
+        self.btnScramble.setGeometry(QtCore.QRect(340, 320, 80, 80))
+        self.btnScramble.setObjectName("btnScramble")
         self.btnSolve = QtGui.QPushButton(self.centralwidget)
-        self.btnSolve.setGeometry(QtCore.QRect(460, 370, 92, 27))
+        self.btnSolve.setGeometry(QtCore.QRect(490, 320, 80, 80))
         self.btnSolve.setObjectName("btnSolve")
+        self.sliSpeed = QtGui.QSlider(self.centralwidget)
+        self.sliSpeed.setGeometry(QtCore.QRect(340, 420, 231, 20))
+        self.sliSpeed.setSliderPosition(75)
+        self.sliSpeed.setOrientation(QtCore.Qt.Horizontal)
+        self.sliSpeed.setTickPosition(QtGui.QSlider.NoTicks)
+        self.sliSpeed.setObjectName("sliSpeed")
+        self.proDone = QtGui.QProgressBar(self.centralwidget)
+        self.proDone.setEnabled(True)
+        self.proDone.setGeometry(QtCore.QRect(10, 470, 591, 23))
+        self.proDone.setProperty("value", 100)
+        self.proDone.setOrientation(QtCore.Qt.Horizontal)
+        self.proDone.setTextDirection(QtGui.QProgressBar.TopToBottom)
+        self.proDone.setObjectName("proDone")
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
@@ -190,6 +203,6 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QtGui.QApplication.translate("MainWindow", "MainWindow", None, QtGui.QApplication.UnicodeUTF8))
-        self.btnMix.setText(QtGui.QApplication.translate("MainWindow", "Scramble", None, QtGui.QApplication.UnicodeUTF8))
+        self.btnScramble.setText(QtGui.QApplication.translate("MainWindow", "Scramble", None, QtGui.QApplication.UnicodeUTF8))
         self.btnSolve.setText(QtGui.QApplication.translate("MainWindow", "Solve", None, QtGui.QApplication.UnicodeUTF8))
 
