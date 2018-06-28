@@ -13,7 +13,6 @@ class RubikApp(QMainWindow, Ui_MainWindow):
         self.setupUi(self)
 
         self.cube = Cube()
-        self.mover = None
 
         self.btnMix.clicked.connect(self.scramble)
         self.btnSolve.clicked.connect(self.solve)
