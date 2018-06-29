@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>955</width>
+    <width>950</width>
     <height>530</height>
    </rect>
   </property>
@@ -17,7 +17,7 @@
    <widget class="QGraphicsView" name="q30">
     <property name="geometry">
      <rect>
-      <x>30</x>
+      <x>25</x>
       <y>175</y>
       <width>40</width>
       <height>40</height>
@@ -27,7 +27,7 @@
    <widget class="QGraphicsView" name="q31">
     <property name="geometry">
      <rect>
-      <x>80</x>
+      <x>75</x>
       <y>175</y>
       <width>40</width>
       <height>40</height>
@@ -37,7 +37,7 @@
    <widget class="QGraphicsView" name="q52">
     <property name="geometry">
      <rect>
-      <x>130</x>
+      <x>125</x>
       <y>275</y>
       <width>40</width>
       <height>40</height>
@@ -47,7 +47,7 @@
    <widget class="QGraphicsView" name="q32">
     <property name="geometry">
      <rect>
-      <x>130</x>
+      <x>125</x>
       <y>175</y>
       <width>40</width>
       <height>40</height>
@@ -57,7 +57,7 @@
    <widget class="QGraphicsView" name="q40">
     <property name="geometry">
      <rect>
-      <x>30</x>
+      <x>25</x>
       <y>225</y>
       <width>40</width>
       <height>40</height>
@@ -67,7 +67,7 @@
    <widget class="QGraphicsView" name="q41">
     <property name="geometry">
      <rect>
-      <x>80</x>
+      <x>75</x>
       <y>225</y>
       <width>40</width>
       <height>40</height>
@@ -77,7 +77,7 @@
    <widget class="QGraphicsView" name="q42">
     <property name="geometry">
      <rect>
-      <x>130</x>
+      <x>125</x>
       <y>225</y>
       <width>40</width>
       <height>40</height>
@@ -87,7 +87,7 @@
    <widget class="QGraphicsView" name="q50">
     <property name="geometry">
      <rect>
-      <x>30</x>
+      <x>25</x>
       <y>275</y>
       <width>40</width>
       <height>40</height>
@@ -97,7 +97,7 @@
    <widget class="QGraphicsView" name="q51">
     <property name="geometry">
      <rect>
-      <x>80</x>
+      <x>75</x>
       <y>275</y>
       <width>40</width>
       <height>40</height>
@@ -108,7 +108,7 @@
     <property name="geometry">
      <rect>
       <x>180</x>
-      <y>125</y>
+      <y>120</y>
       <width>40</width>
       <height>40</height>
      </rect>
@@ -118,7 +118,7 @@
     <property name="geometry">
      <rect>
       <x>180</x>
-      <y>25</y>
+      <y>20</y>
       <width>40</width>
       <height>40</height>
      </rect>
@@ -128,7 +128,7 @@
     <property name="geometry">
      <rect>
       <x>230</x>
-      <y>75</y>
+      <y>70</y>
       <width>40</width>
       <height>40</height>
      </rect>
@@ -138,7 +138,7 @@
     <property name="geometry">
      <rect>
       <x>230</x>
-      <y>125</y>
+      <y>120</y>
       <width>40</width>
       <height>40</height>
      </rect>
@@ -148,7 +148,7 @@
     <property name="geometry">
      <rect>
       <x>280</x>
-      <y>125</y>
+      <y>120</y>
       <width>40</width>
       <height>40</height>
      </rect>
@@ -158,7 +158,7 @@
     <property name="geometry">
      <rect>
       <x>280</x>
-      <y>25</y>
+      <y>20</y>
       <width>40</width>
       <height>40</height>
      </rect>
@@ -168,7 +168,7 @@
     <property name="geometry">
      <rect>
       <x>280</x>
-      <y>75</y>
+      <y>70</y>
       <width>40</width>
       <height>40</height>
      </rect>
@@ -178,7 +178,7 @@
     <property name="geometry">
      <rect>
       <x>230</x>
-      <y>25</y>
+      <y>20</y>
       <width>40</width>
       <height>40</height>
      </rect>
@@ -188,7 +188,7 @@
     <property name="geometry">
      <rect>
       <x>180</x>
-      <y>75</y>
+      <y>70</y>
       <width>40</width>
       <height>40</height>
      </rect>
@@ -287,7 +287,7 @@
    <widget class="QGraphicsView" name="q47">
     <property name="geometry">
      <rect>
-      <x>380</x>
+      <x>385</x>
       <y>225</y>
       <width>40</width>
       <height>40</height>
@@ -297,7 +297,7 @@
    <widget class="QGraphicsView" name="q37">
     <property name="geometry">
      <rect>
-      <x>380</x>
+      <x>385</x>
       <y>175</y>
       <width>40</width>
       <height>40</height>
@@ -307,7 +307,7 @@
    <widget class="QGraphicsView" name="q38">
     <property name="geometry">
      <rect>
-      <x>430</x>
+      <x>435</x>
       <y>175</y>
       <width>40</width>
       <height>40</height>
@@ -317,7 +317,7 @@
    <widget class="QGraphicsView" name="q36">
     <property name="geometry">
      <rect>
-      <x>330</x>
+      <x>335</x>
       <y>175</y>
       <width>40</width>
       <height>40</height>
@@ -327,7 +327,7 @@
    <widget class="QGraphicsView" name="q58">
     <property name="geometry">
      <rect>
-      <x>430</x>
+      <x>435</x>
       <y>275</y>
       <width>40</width>
       <height>40</height>
@@ -337,7 +337,7 @@
    <widget class="QGraphicsView" name="q48">
     <property name="geometry">
      <rect>
-      <x>430</x>
+      <x>435</x>
       <y>225</y>
       <width>40</width>
       <height>40</height>
@@ -347,7 +347,7 @@
    <widget class="QGraphicsView" name="q57">
     <property name="geometry">
      <rect>
-      <x>380</x>
+      <x>385</x>
       <y>275</y>
       <width>40</width>
       <height>40</height>
@@ -357,7 +357,7 @@
    <widget class="QGraphicsView" name="q56">
     <property name="geometry">
      <rect>
-      <x>330</x>
+      <x>335</x>
       <y>275</y>
       <width>40</width>
       <height>40</height>
@@ -367,7 +367,7 @@
    <widget class="QGraphicsView" name="q46">
     <property name="geometry">
      <rect>
-      <x>330</x>
+      <x>335</x>
       <y>225</y>
       <width>40</width>
       <height>40</height>
@@ -377,7 +377,7 @@
    <widget class="QGraphicsView" name="q410">
     <property name="geometry">
      <rect>
-      <x>530</x>
+      <x>540</x>
       <y>225</y>
       <width>40</width>
       <height>40</height>
@@ -387,7 +387,7 @@
    <widget class="QGraphicsView" name="q310">
     <property name="geometry">
      <rect>
-      <x>530</x>
+      <x>540</x>
       <y>175</y>
       <width>40</width>
       <height>40</height>
@@ -397,7 +397,7 @@
    <widget class="QGraphicsView" name="q311">
     <property name="geometry">
      <rect>
-      <x>580</x>
+      <x>590</x>
       <y>175</y>
       <width>40</width>
       <height>40</height>
@@ -407,7 +407,7 @@
    <widget class="QGraphicsView" name="q39">
     <property name="geometry">
      <rect>
-      <x>480</x>
+      <x>490</x>
       <y>175</y>
       <width>40</width>
       <height>40</height>
@@ -417,7 +417,7 @@
    <widget class="QGraphicsView" name="q511">
     <property name="geometry">
      <rect>
-      <x>580</x>
+      <x>590</x>
       <y>275</y>
       <width>40</width>
       <height>40</height>
@@ -427,7 +427,7 @@
    <widget class="QGraphicsView" name="q411">
     <property name="geometry">
      <rect>
-      <x>580</x>
+      <x>590</x>
       <y>225</y>
       <width>40</width>
       <height>40</height>
@@ -437,7 +437,7 @@
    <widget class="QGraphicsView" name="q510">
     <property name="geometry">
      <rect>
-      <x>530</x>
+      <x>540</x>
       <y>275</y>
       <width>40</width>
       <height>40</height>
@@ -447,7 +447,7 @@
    <widget class="QGraphicsView" name="q59">
     <property name="geometry">
      <rect>
-      <x>480</x>
+      <x>490</x>
       <y>275</y>
       <width>40</width>
       <height>40</height>
@@ -457,7 +457,7 @@
    <widget class="QGraphicsView" name="q49">
     <property name="geometry">
      <rect>
-      <x>480</x>
+      <x>490</x>
       <y>225</y>
       <width>40</width>
       <height>40</height>
@@ -468,7 +468,7 @@
     <property name="geometry">
      <rect>
       <x>230</x>
-      <y>375</y>
+      <y>380</y>
       <width>40</width>
       <height>40</height>
      </rect>
@@ -478,7 +478,7 @@
     <property name="geometry">
      <rect>
       <x>230</x>
-      <y>325</y>
+      <y>330</y>
       <width>40</width>
       <height>40</height>
      </rect>
@@ -488,7 +488,7 @@
     <property name="geometry">
      <rect>
       <x>280</x>
-      <y>325</y>
+      <y>330</y>
       <width>40</width>
       <height>40</height>
      </rect>
@@ -498,7 +498,7 @@
     <property name="geometry">
      <rect>
       <x>180</x>
-      <y>325</y>
+      <y>330</y>
       <width>40</width>
       <height>40</height>
      </rect>
@@ -508,7 +508,7 @@
     <property name="geometry">
      <rect>
       <x>280</x>
-      <y>425</y>
+      <y>430</y>
       <width>40</width>
       <height>40</height>
      </rect>
@@ -518,7 +518,7 @@
     <property name="geometry">
      <rect>
       <x>280</x>
-      <y>375</y>
+      <y>380</y>
       <width>40</width>
       <height>40</height>
      </rect>
@@ -528,7 +528,7 @@
     <property name="geometry">
      <rect>
       <x>230</x>
-      <y>425</y>
+      <y>430</y>
       <width>40</width>
       <height>40</height>
      </rect>
@@ -538,7 +538,7 @@
     <property name="geometry">
      <rect>
       <x>180</x>
-      <y>425</y>
+      <y>430</y>
       <width>40</width>
       <height>40</height>
      </rect>
@@ -548,7 +548,7 @@
     <property name="geometry">
      <rect>
       <x>180</x>
-      <y>375</y>
+      <y>380</y>
       <width>40</width>
       <height>40</height>
      </rect>
@@ -606,7 +606,7 @@
     <property name="geometry">
      <rect>
       <x>30</x>
-      <y>485</y>
+      <y>490</y>
       <width>591</width>
       <height>23</height>
      </rect>
@@ -855,260 +855,74 @@
      <string>B2</string>
     </property>
    </widget>
-   <widget class="QGraphicsView" name="qB1">
+   <widget class="QGraphicsView" name="qB7">
     <property name="geometry">
      <rect>
-      <x>25</x>
-      <y>170</y>
-      <width>600</width>
-      <height>151</height>
+      <x>655</x>
+      <y>60</y>
+      <width>270</width>
+      <height>375</height>
      </rect>
     </property>
    </widget>
    <widget class="QGraphicsView" name="qB2">
     <property name="geometry">
      <rect>
-      <x>175</x>
-      <y>20</y>
-      <width>151</width>
-      <height>450</height>
+      <x>20</x>
+      <y>170</y>
+      <width>150</width>
+      <height>150</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QGraphicsView" name="qB5">
+    <property name="geometry">
+     <rect>
+      <x>485</x>
+      <y>170</y>
+      <width>150</width>
+      <height>150</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QGraphicsView" name="qB4">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>170</y>
+      <width>150</width>
+      <height>150</height>
      </rect>
     </property>
    </widget>
    <widget class="QGraphicsView" name="qB3">
     <property name="geometry">
      <rect>
-      <x>655</x>
-      <y>60</y>
-      <width>270</width>
-      <height>375</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="Line" name="l4">
-    <property name="geometry">
-     <rect>
       <x>175</x>
-      <y>465</y>
+      <y>170</y>
       <width>150</width>
-      <height>10</height>
+      <height>150</height>
      </rect>
     </property>
-    <property name="layoutDirection">
-     <enum>Qt::LeftToRight</enum>
-    </property>
-    <property name="frameShadow">
-     <enum>QFrame::Plain</enum>
-    </property>
-    <property name="orientation">
-     <enum>Qt::Horizontal</enum>
-    </property>
    </widget>
-   <widget class="Line" name="l10">
-    <property name="geometry">
-     <rect>
-      <x>655</x>
-      <y>55</y>
-      <width>270</width>
-      <height>10</height>
-     </rect>
-    </property>
-    <property name="layoutDirection">
-     <enum>Qt::LeftToRight</enum>
-    </property>
-    <property name="frameShadow">
-     <enum>QFrame::Plain</enum>
-    </property>
-    <property name="orientation">
-     <enum>Qt::Horizontal</enum>
-    </property>
-   </widget>
-   <widget class="Line" name="l1">
-    <property name="geometry">
-     <rect>
-      <x>25</x>
-      <y>165</y>
-      <width>600</width>
-      <height>10</height>
-     </rect>
-    </property>
-    <property name="layoutDirection">
-     <enum>Qt::LeftToRight</enum>
-    </property>
-    <property name="frameShadow">
-     <enum>QFrame::Plain</enum>
-    </property>
-    <property name="orientation">
-     <enum>Qt::Horizontal</enum>
-    </property>
-   </widget>
-   <widget class="Line" name="l3">
+   <widget class="QGraphicsView" name="qB1">
     <property name="geometry">
      <rect>
       <x>175</x>
       <y>15</y>
       <width>150</width>
-      <height>10</height>
-     </rect>
-    </property>
-    <property name="layoutDirection">
-     <enum>Qt::LeftToRight</enum>
-    </property>
-    <property name="frameShadow">
-     <enum>QFrame::Plain</enum>
-    </property>
-    <property name="orientation">
-     <enum>Qt::Horizontal</enum>
-    </property>
-   </widget>
-   <widget class="Line" name="l7">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>170</y>
-      <width>10</width>
       <height>150</height>
      </rect>
     </property>
-    <property name="frameShadow">
-     <enum>QFrame::Plain</enum>
-    </property>
-    <property name="orientation">
-     <enum>Qt::Vertical</enum>
-    </property>
    </widget>
-   <widget class="Line" name="l9">
+   <widget class="QGraphicsView" name="qB6">
     <property name="geometry">
      <rect>
-      <x>620</x>
-      <y>170</y>
-      <width>10</width>
+      <x>175</x>
+      <y>325</y>
+      <width>150</width>
       <height>150</height>
      </rect>
-    </property>
-    <property name="frameShadow">
-     <enum>QFrame::Plain</enum>
-    </property>
-    <property name="orientation">
-     <enum>Qt::Vertical</enum>
-    </property>
-   </widget>
-   <widget class="Line" name="l8">
-    <property name="geometry">
-     <rect>
-      <x>470</x>
-      <y>170</y>
-      <width>10</width>
-      <height>150</height>
-     </rect>
-    </property>
-    <property name="frameShadow">
-     <enum>QFrame::Plain</enum>
-    </property>
-    <property name="orientation">
-     <enum>Qt::Vertical</enum>
-    </property>
-   </widget>
-   <widget class="Line" name="l6">
-    <property name="geometry">
-     <rect>
-      <x>320</x>
-      <y>20</y>
-      <width>10</width>
-      <height>450</height>
-     </rect>
-    </property>
-    <property name="frameShadow">
-     <enum>QFrame::Plain</enum>
-    </property>
-    <property name="orientation">
-     <enum>Qt::Vertical</enum>
-    </property>
-   </widget>
-   <widget class="Line" name="l5">
-    <property name="geometry">
-     <rect>
-      <x>170</x>
-      <y>20</y>
-      <width>10</width>
-      <height>450</height>
-     </rect>
-    </property>
-    <property name="frameShadow">
-     <enum>QFrame::Plain</enum>
-    </property>
-    <property name="orientation">
-     <enum>Qt::Vertical</enum>
-    </property>
-   </widget>
-   <widget class="Line" name="l13">
-    <property name="geometry">
-     <rect>
-      <x>920</x>
-      <y>60</y>
-      <width>10</width>
-      <height>375</height>
-     </rect>
-    </property>
-    <property name="frameShadow">
-     <enum>QFrame::Plain</enum>
-    </property>
-    <property name="orientation">
-     <enum>Qt::Vertical</enum>
-    </property>
-   </widget>
-   <widget class="Line" name="l11">
-    <property name="geometry">
-     <rect>
-      <x>655</x>
-      <y>430</y>
-      <width>270</width>
-      <height>10</height>
-     </rect>
-    </property>
-    <property name="layoutDirection">
-     <enum>Qt::LeftToRight</enum>
-    </property>
-    <property name="frameShadow">
-     <enum>QFrame::Plain</enum>
-    </property>
-    <property name="orientation">
-     <enum>Qt::Horizontal</enum>
-    </property>
-   </widget>
-   <widget class="Line" name="l2">
-    <property name="geometry">
-     <rect>
-      <x>25</x>
-      <y>315</y>
-      <width>600</width>
-      <height>10</height>
-     </rect>
-    </property>
-    <property name="layoutDirection">
-     <enum>Qt::LeftToRight</enum>
-    </property>
-    <property name="frameShadow">
-     <enum>QFrame::Plain</enum>
-    </property>
-    <property name="orientation">
-     <enum>Qt::Horizontal</enum>
-    </property>
-   </widget>
-   <widget class="Line" name="l12">
-    <property name="geometry">
-     <rect>
-      <x>650</x>
-      <y>60</y>
-      <width>10</width>
-      <height>375</height>
-     </rect>
-    </property>
-    <property name="frameShadow">
-     <enum>QFrame::Plain</enum>
-    </property>
-    <property name="orientation">
-     <enum>Qt::Vertical</enum>
     </property>
    </widget>
   </widget>

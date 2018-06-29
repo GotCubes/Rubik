@@ -1,5 +1,4 @@
 import sys
-from PySide.QtCore import *
 from PySide.QtGui import *
 from rubikUI import *
 from rubik import *
@@ -38,6 +37,8 @@ class RubikApp(QMainWindow, Ui_MainWindow):
         self.blue = QGraphicsScene(); self.blue.setBackgroundBrush(QColor(1, 176, 241))
         self.yellow = QGraphicsScene(); self.yellow.setBackgroundBrush(QColor(255, 255, 1))
         self.black = QGraphicsScene(); self.black.setBackgroundBrush(QColor(0, 0, 0))
+        self.colors = {"W": self.white, "O": self.orange, "G": self.green,
+                       "R": self.red, "B": self.blue, "Y": self.yellow}
 
         # Group facets.
         self.facets = [[0, 0, 0, self.q03, self.q04, self.q05, 0, 0, 0, 0, 0, 0],
@@ -51,17 +52,17 @@ class RubikApp(QMainWindow, Ui_MainWindow):
                        [0, 0, 0, self.q83, self.q84, self.q85, 0, 0, 0, 0, 0, 0]]
 
         # Render colors.
-        self.background = [self.qB1, self.qB2, self.qB3]
+        self.background = [self.qB1, self.qB2, self.qB3, self.qB4, self.qB5, self.qB6, self.qB7]
         for background in self.background:
             background.setScene(self.black)
+
         for row in self.facets:
             for facet in row:
                 if facet: facet.raise_()
-        self.lines = [self.l1, self.l2, self.l3, self.l4, self.l5, self.l6, self.l7, self.l8, self.l9, self.l10, self.l11, self.l12, self.l13]
-        for line in self.lines:
-            line.raise_()
+
         for button in self.buttons:
             button.raise_()
+
         self.btnScramble.raise_()
         self.btnSolve.raise_()
         self.sliSpeed.raise_()
@@ -78,6 +79,9 @@ class RubikApp(QMainWindow, Ui_MainWindow):
         self.btnScramble.setEnabled(op)
         self.btnSolve.setEnabled(op)
 
+        for button in self.buttons:
+            button.setEnabled(op)
+
     def setSpeed(self):
         self.speed = 100 - self.sliSpeed.value()
 
@@ -87,18 +91,13 @@ class RubikApp(QMainWindow, Ui_MainWindow):
 
         # Break wait down to increase responsiveness.
         for i in range(self.speed):
-            time.sleep(0.01)
+            time.sleep(0.005)
             QApplication.processEvents()
 
     def update(self):
         # Set the color of each facet.
         for (i, j), facet in np.ndenumerate(self.cube.puz):
-            if facet == "W": self.facets[i][j].setScene(self.white)
-            elif facet == "O": self.facets[i][j].setScene(self.orange)
-            elif facet == "G": self.facets[i][j].setScene(self.green)
-            elif facet == "R": self.facets[i][j].setScene(self.red)
-            elif facet == "B": self.facets[i][j].setScene(self.blue)
-            elif facet == "Y": self.facets[i][j].setScene(self.yellow)
+            if facet != "_": self.facets[i][j].setScene(self.colors[facet])
 
     def execute(self, algorithm):
         # Add algorithm to running solution.
@@ -114,9 +113,8 @@ class RubikApp(QMainWindow, Ui_MainWindow):
     def scramble(self):
         # Prepare cube.
         self.setLock(False)
-        moves = [U, Up, U2, D, Dp, D2, R, Rp, R2, L, Lp, L2, F, Fp, F2, B, Bp, B2]
         scramble = []
-        choice = random.choice(moves)
+        choice = random.choice(self.moves)
 
         # Make 20  random moves.
         for i in range(20):
@@ -128,7 +126,7 @@ class RubikApp(QMainWindow, Ui_MainWindow):
             self.processScreen()
 
             # Make a new random choice. Ensure the same face isn't selected.
-            choice = random.choice([move for move in moves if move.__name__[0] != choice.__name__[0]])
+            choice = random.choice([move for move in self.moves if move.__name__[0] != choice.__name__[0]])
         self.setLock(True)
         self.cube.scramble = "Generated the following scramble:\n" + " ".join(scramble) + "\n"
         print(self.cube.scramble)
@@ -140,23 +138,62 @@ class RubikApp(QMainWindow, Ui_MainWindow):
         self.proDone.setValue(0)
         self.proDone.show()
 
-        # Execute steps.
-        self.cube.solution = "=== Bottom Edges ===\n"; bEdges(self)
-        self.proDone.setValue(15)
-        self.cube.solution += "\n=== Bottom Corners ===\n"; bCorners(self)
-        self.proDone.setValue(30)
-        self.cube.solution += "\n=== Middle Edges ===\n"; mEdges(self)
-        self.proDone.setValue(45)
-        self.cube.solution += "\n=== Top Edge Orientation ===\n"; tEdgesO(self)
-        self.proDone.setValue(60)
-        self.cube.solution += "\n=== Top Corner Orientation ===\n"; tCornersO(self)
-        self.proDone.setValue(75)
-        self.cube.solution += "\n=== Top Corner Permutation ===\n"; tCornersP(self)
-        self.proDone.setValue(90)
-        self.cube.solution += "\n=== Top Edge Permutation ===\n"; tEdgesP(self)
-        self.proDone.setValue(100)
-        self.cube.solution += "\nSolution found in {} moves.\n".format(self.cube.solLen)
+        # Bottom edges.
+        self.cube.solution = "=== Bottom Edges ===\n"
+        self.execute(algsYG[locateEdge(self.cube, "Y", "G")])
+        self.proDone.setValue(6)
+        self.execute(algsYO[locateEdge(self.cube, "Y", "O")])
+        self.proDone.setValue(12)
+        self.execute(algsYB[locateEdge(self.cube, "Y", "B")])
+        self.proDone.setValue(18)
+        self.execute(algsYR[locateEdge(self.cube, "Y", "R")])
+        self.proDone.setValue(24)
 
+        # Bottom corners.
+        self.cube.solution += "\n=== Bottom Corners ===\n"
+        self.execute(algsYOG[locateCorner(self.cube, "Y", "O", "G")])
+        self.proDone.setValue(30)
+        self.execute(algsYBO[locateCorner(self.cube, "Y", "B", "O")])
+        self.proDone.setValue(36)
+        self.execute(algsYRB[locateCorner(self.cube, "Y", "R", "B")])
+        self.proDone.setValue(42)
+        self.execute(algsYGR[locateCorner(self.cube, "Y", "G", "R")])
+        self.proDone.setValue(48)
+
+        # Middle edges.
+        self.cube.solution += "\n=== Middle Edges ===\n"
+        self.execute(algsGO[locateEdge(self.cube, "G", "O")])
+        self.proDone.setValue(54)
+        self.execute(algsOB[locateEdge(self.cube, "O", "B")])
+        self.proDone.setValue(60)
+        self.execute(algsBR[locateEdge(self.cube, "B", "R")])
+        self.proDone.setValue(66)
+        self.execute(algsRG[locateEdge(self.cube, "R", "G")])
+        self.proDone.setValue(72)
+
+        # Top edge orientation.
+        self.cube.solution += "\n=== Top Edge Orientation ===\n"
+        self.execute(algsEO[locateEdgeOri(self.cube)])
+        self.proDone.setValue(78)
+
+        # Top corner orientation
+        self.cube.solution += "\n=== Top Corner Orientation ===\n"
+        self.execute(algsCO[locateCornerOri(self.cube)])
+        self.proDone.setValue(84)
+
+        # Top corner permutation.
+        self.cube.solution += "\n=== Top Corner Permutation ===\n"
+        self.execute(algsCP[locateCornerPerm(self.cube)])
+        self.proDone.setValue(90)
+
+        # Top edge permutation.
+        self.cube.solution += "\n=== Top Edge Permutation ===\n"
+        self.execute(algsEP[locateEdgePerm(self.cube)])
+        self.proDone.setValue(96)
+        self.execute(algsFA[self.cube.puz[3, 4]])
+        self.proDone.setValue(100)
+
+        self.cube.solution += "\nSolution found in {} moves.\n".format(self.cube.solLen)
         self.setLock(True)
         print(self.cube.solution)
         self.proDone.hide()
