@@ -217,18 +217,6 @@ algsYGR = {((6, 5), (5, 5), (5, 6)): [],
            ((3, 5), (2, 5), (3, 6)): [Fp, Up, F],
            ((3, 6), (3, 5), (2, 5)): [R, U, Rp]}
 
-# Right insert.
-# Green U, R, Up, Rp, Up, Fp, U, F
-# Orange U, F, Up, Fp, Up, Lp, U, L
-# Blue U, L, Up, Lp, Up, Bp, U, B
-# Red U, B, Up, Bp, Up, Rp, U, R
-
-# Left insert.
-# Green Up, Lp, U, L, U, F, Up, Fp
-# Orange Up, Bp, U, B, U, L, Up, Lp
-# Blue Up, Rp, U, R, U, B, Up, Bp
-# Red Up, Fp, U, F, U, R, Up, Rp
-
 # Green / Orange edge.
 algsGO = {((4, 3), (4, 2)): [],
           ((4, 2), (4, 3)): [F, U, Fp, Up, Lp, Up, L, Up, F, Up, Fp, Up, Lp, U, L],
