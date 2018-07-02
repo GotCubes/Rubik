@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>950</width>
-    <height>530</height>
+    <height>800</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -23,6 +23,9 @@
       <height>40</height>
      </rect>
     </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
    </widget>
    <widget class="QGraphicsView" name="q31">
     <property name="geometry">
@@ -32,6 +35,9 @@
       <width>40</width>
       <height>40</height>
      </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
     </property>
    </widget>
    <widget class="QGraphicsView" name="q52">
@@ -43,6 +49,9 @@
       <height>40</height>
      </rect>
     </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
    </widget>
    <widget class="QGraphicsView" name="q32">
     <property name="geometry">
@@ -52,6 +61,9 @@
       <width>40</width>
       <height>40</height>
      </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
     </property>
    </widget>
    <widget class="QGraphicsView" name="q40">
@@ -63,6 +75,9 @@
       <height>40</height>
      </rect>
     </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
    </widget>
    <widget class="QGraphicsView" name="q41">
     <property name="geometry">
@@ -72,6 +87,12 @@
       <width>40</width>
       <height>40</height>
      </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="interactive">
+     <bool>false</bool>
     </property>
    </widget>
    <widget class="QGraphicsView" name="q42">
@@ -83,6 +104,9 @@
       <height>40</height>
      </rect>
     </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
    </widget>
    <widget class="QGraphicsView" name="q50">
     <property name="geometry">
@@ -92,6 +116,9 @@
       <width>40</width>
       <height>40</height>
      </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
     </property>
    </widget>
    <widget class="QGraphicsView" name="q51">
@@ -103,6 +130,9 @@
       <height>40</height>
      </rect>
     </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
    </widget>
    <widget class="QGraphicsView" name="q23">
     <property name="geometry">
@@ -112,6 +142,9 @@
       <width>40</width>
       <height>40</height>
      </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
     </property>
    </widget>
    <widget class="QGraphicsView" name="q03">
@@ -123,6 +156,9 @@
       <height>40</height>
      </rect>
     </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
    </widget>
    <widget class="QGraphicsView" name="q14">
     <property name="geometry">
@@ -132,6 +168,12 @@
       <width>40</width>
       <height>40</height>
      </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="interactive">
+     <bool>false</bool>
     </property>
    </widget>
    <widget class="QGraphicsView" name="q24">
@@ -143,6 +185,9 @@
       <height>40</height>
      </rect>
     </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
    </widget>
    <widget class="QGraphicsView" name="q25">
     <property name="geometry">
@@ -152,6 +197,9 @@
       <width>40</width>
       <height>40</height>
      </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
     </property>
    </widget>
    <widget class="QGraphicsView" name="q05">
@@ -163,6 +211,9 @@
       <height>40</height>
      </rect>
     </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
    </widget>
    <widget class="QGraphicsView" name="q15">
     <property name="geometry">
@@ -172,6 +223,9 @@
       <width>40</width>
       <height>40</height>
      </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
     </property>
    </widget>
    <widget class="QGraphicsView" name="q04">
@@ -183,6 +237,9 @@
       <height>40</height>
      </rect>
     </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
    </widget>
    <widget class="QGraphicsView" name="q13">
     <property name="geometry">
@@ -192,6 +249,9 @@
       <width>40</width>
       <height>40</height>
      </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
     </property>
    </widget>
    <widget class="QGraphicsView" name="q44">
@@ -203,6 +263,12 @@
       <height>40</height>
      </rect>
     </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="interactive">
+     <bool>false</bool>
+    </property>
    </widget>
    <widget class="QGraphicsView" name="q34">
     <property name="geometry">
@@ -212,6 +278,9 @@
       <width>40</width>
       <height>40</height>
      </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
     </property>
    </widget>
    <widget class="QGraphicsView" name="q35">
@@ -223,6 +292,9 @@
       <height>40</height>
      </rect>
     </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
    </widget>
    <widget class="QGraphicsView" name="q33">
     <property name="geometry">
@@ -232,6 +304,9 @@
       <width>40</width>
       <height>40</height>
      </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
     </property>
    </widget>
    <widget class="QGraphicsView" name="q55">
@@ -243,6 +318,9 @@
       <height>40</height>
      </rect>
     </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
    </widget>
    <widget class="QGraphicsView" name="q45">
     <property name="geometry">
@@ -252,6 +330,9 @@
       <width>40</width>
       <height>40</height>
      </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
     </property>
    </widget>
    <widget class="QGraphicsView" name="q54">
@@ -263,6 +344,9 @@
       <height>40</height>
      </rect>
     </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
    </widget>
    <widget class="QGraphicsView" name="q53">
     <property name="geometry">
@@ -272,6 +356,9 @@
       <width>40</width>
       <height>40</height>
      </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
     </property>
    </widget>
    <widget class="QGraphicsView" name="q43">
@@ -283,6 +370,9 @@
       <height>40</height>
      </rect>
     </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
    </widget>
    <widget class="QGraphicsView" name="q47">
     <property name="geometry">
@@ -292,6 +382,12 @@
       <width>40</width>
       <height>40</height>
      </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="interactive">
+     <bool>false</bool>
     </property>
    </widget>
    <widget class="QGraphicsView" name="q37">
@@ -303,6 +399,9 @@
       <height>40</height>
      </rect>
     </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
    </widget>
    <widget class="QGraphicsView" name="q38">
     <property name="geometry">
@@ -312,6 +411,9 @@
       <width>40</width>
       <height>40</height>
      </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
     </property>
    </widget>
    <widget class="QGraphicsView" name="q36">
@@ -323,6 +425,9 @@
       <height>40</height>
      </rect>
     </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
    </widget>
    <widget class="QGraphicsView" name="q58">
     <property name="geometry">
@@ -332,6 +437,9 @@
       <width>40</width>
       <height>40</height>
      </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
     </property>
    </widget>
    <widget class="QGraphicsView" name="q48">
@@ -343,6 +451,9 @@
       <height>40</height>
      </rect>
     </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
    </widget>
    <widget class="QGraphicsView" name="q57">
     <property name="geometry">
@@ -352,6 +463,9 @@
       <width>40</width>
       <height>40</height>
      </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
     </property>
    </widget>
    <widget class="QGraphicsView" name="q56">
@@ -363,6 +477,9 @@
       <height>40</height>
      </rect>
     </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
    </widget>
    <widget class="QGraphicsView" name="q46">
     <property name="geometry">
@@ -372,6 +489,9 @@
       <width>40</width>
       <height>40</height>
      </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
     </property>
    </widget>
    <widget class="QGraphicsView" name="q410">
@@ -383,6 +503,12 @@
       <height>40</height>
      </rect>
     </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="interactive">
+     <bool>false</bool>
+    </property>
    </widget>
    <widget class="QGraphicsView" name="q310">
     <property name="geometry">
@@ -392,6 +518,9 @@
       <width>40</width>
       <height>40</height>
      </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
     </property>
    </widget>
    <widget class="QGraphicsView" name="q311">
@@ -403,6 +532,9 @@
       <height>40</height>
      </rect>
     </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
    </widget>
    <widget class="QGraphicsView" name="q39">
     <property name="geometry">
@@ -412,6 +544,9 @@
       <width>40</width>
       <height>40</height>
      </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
     </property>
    </widget>
    <widget class="QGraphicsView" name="q511">
@@ -423,6 +558,9 @@
       <height>40</height>
      </rect>
     </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
    </widget>
    <widget class="QGraphicsView" name="q411">
     <property name="geometry">
@@ -432,6 +570,9 @@
       <width>40</width>
       <height>40</height>
      </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
     </property>
    </widget>
    <widget class="QGraphicsView" name="q510">
@@ -443,6 +584,9 @@
       <height>40</height>
      </rect>
     </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
    </widget>
    <widget class="QGraphicsView" name="q59">
     <property name="geometry">
@@ -452,6 +596,9 @@
       <width>40</width>
       <height>40</height>
      </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
     </property>
    </widget>
    <widget class="QGraphicsView" name="q49">
@@ -463,6 +610,9 @@
       <height>40</height>
      </rect>
     </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
    </widget>
    <widget class="QGraphicsView" name="q74">
     <property name="geometry">
@@ -472,6 +622,12 @@
       <width>40</width>
       <height>40</height>
      </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="interactive">
+     <bool>false</bool>
     </property>
    </widget>
    <widget class="QGraphicsView" name="q64">
@@ -483,6 +639,9 @@
       <height>40</height>
      </rect>
     </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
    </widget>
    <widget class="QGraphicsView" name="q65">
     <property name="geometry">
@@ -492,6 +651,9 @@
       <width>40</width>
       <height>40</height>
      </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
     </property>
    </widget>
    <widget class="QGraphicsView" name="q63">
@@ -503,6 +665,9 @@
       <height>40</height>
      </rect>
     </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
    </widget>
    <widget class="QGraphicsView" name="q85">
     <property name="geometry">
@@ -512,6 +677,9 @@
       <width>40</width>
       <height>40</height>
      </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
     </property>
    </widget>
    <widget class="QGraphicsView" name="q75">
@@ -523,6 +691,9 @@
       <height>40</height>
      </rect>
     </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
    </widget>
    <widget class="QGraphicsView" name="q84">
     <property name="geometry">
@@ -532,6 +703,9 @@
       <width>40</width>
       <height>40</height>
      </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
     </property>
    </widget>
    <widget class="QGraphicsView" name="q83">
@@ -543,6 +717,9 @@
       <height>40</height>
      </rect>
     </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
    </widget>
    <widget class="QGraphicsView" name="q73">
     <property name="geometry">
@@ -553,12 +730,15 @@
       <height>40</height>
      </rect>
     </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
    </widget>
    <widget class="QPushButton" name="btnScramble">
     <property name="geometry">
      <rect>
-      <x>835</x>
-      <y>105</y>
+      <x>840</x>
+      <y>320</y>
       <width>80</width>
       <height>80</height>
      </rect>
@@ -570,8 +750,8 @@
    <widget class="QPushButton" name="btnSolve">
     <property name="geometry">
      <rect>
-      <x>835</x>
-      <y>275</y>
+      <x>840</x>
+      <y>420</y>
       <width>80</width>
       <height>80</height>
      </rect>
@@ -583,8 +763,8 @@
    <widget class="QSlider" name="sliSpeed">
     <property name="geometry">
      <rect>
-      <x>670</x>
-      <y>405</y>
+      <x>675</x>
+      <y>535</y>
       <width>241</width>
       <height>20</height>
      </rect>
@@ -624,8 +804,8 @@
    <widget class="QPushButton" name="btnU">
     <property name="geometry">
      <rect>
-      <x>665</x>
-      <y>70</y>
+      <x>670</x>
+      <y>200</y>
       <width>50</width>
       <height>50</height>
      </rect>
@@ -637,8 +817,8 @@
    <widget class="QPushButton" name="btnU2">
     <property name="geometry">
      <rect>
-      <x>775</x>
-      <y>70</y>
+      <x>780</x>
+      <y>200</y>
       <width>50</width>
       <height>50</height>
      </rect>
@@ -650,8 +830,8 @@
    <widget class="QPushButton" name="btnUp">
     <property name="geometry">
      <rect>
-      <x>720</x>
-      <y>70</y>
+      <x>725</x>
+      <y>200</y>
       <width>50</width>
       <height>50</height>
      </rect>
@@ -663,8 +843,8 @@
    <widget class="QPushButton" name="btnD">
     <property name="geometry">
      <rect>
-      <x>665</x>
-      <y>125</y>
+      <x>670</x>
+      <y>255</y>
       <width>50</width>
       <height>50</height>
      </rect>
@@ -676,8 +856,8 @@
    <widget class="QPushButton" name="btnDp">
     <property name="geometry">
      <rect>
-      <x>720</x>
-      <y>125</y>
+      <x>725</x>
+      <y>255</y>
       <width>50</width>
       <height>50</height>
      </rect>
@@ -689,8 +869,8 @@
    <widget class="QPushButton" name="btnD2">
     <property name="geometry">
      <rect>
-      <x>775</x>
-      <y>125</y>
+      <x>780</x>
+      <y>255</y>
       <width>50</width>
       <height>50</height>
      </rect>
@@ -702,8 +882,8 @@
    <widget class="QPushButton" name="btnL">
     <property name="geometry">
      <rect>
-      <x>665</x>
-      <y>180</y>
+      <x>670</x>
+      <y>310</y>
       <width>50</width>
       <height>50</height>
      </rect>
@@ -715,8 +895,8 @@
    <widget class="QPushButton" name="btnLp">
     <property name="geometry">
      <rect>
-      <x>720</x>
-      <y>180</y>
+      <x>725</x>
+      <y>310</y>
       <width>50</width>
       <height>50</height>
      </rect>
@@ -728,8 +908,8 @@
    <widget class="QPushButton" name="btnL2">
     <property name="geometry">
      <rect>
-      <x>775</x>
-      <y>180</y>
+      <x>780</x>
+      <y>310</y>
       <width>50</width>
       <height>50</height>
      </rect>
@@ -741,8 +921,8 @@
    <widget class="QPushButton" name="btnR">
     <property name="geometry">
      <rect>
-      <x>665</x>
-      <y>235</y>
+      <x>670</x>
+      <y>365</y>
       <width>50</width>
       <height>50</height>
      </rect>
@@ -754,8 +934,8 @@
    <widget class="QPushButton" name="btnRp">
     <property name="geometry">
      <rect>
-      <x>720</x>
-      <y>235</y>
+      <x>725</x>
+      <y>365</y>
       <width>50</width>
       <height>50</height>
      </rect>
@@ -767,8 +947,8 @@
    <widget class="QPushButton" name="btnR2">
     <property name="geometry">
      <rect>
-      <x>775</x>
-      <y>235</y>
+      <x>780</x>
+      <y>365</y>
       <width>50</width>
       <height>50</height>
      </rect>
@@ -780,8 +960,8 @@
    <widget class="QPushButton" name="btnF">
     <property name="geometry">
      <rect>
-      <x>665</x>
-      <y>290</y>
+      <x>670</x>
+      <y>420</y>
       <width>50</width>
       <height>50</height>
      </rect>
@@ -793,8 +973,8 @@
    <widget class="QPushButton" name="btnFp">
     <property name="geometry">
      <rect>
-      <x>720</x>
-      <y>290</y>
+      <x>725</x>
+      <y>420</y>
       <width>50</width>
       <height>50</height>
      </rect>
@@ -806,8 +986,8 @@
    <widget class="QPushButton" name="btnF2">
     <property name="geometry">
      <rect>
-      <x>775</x>
-      <y>290</y>
+      <x>780</x>
+      <y>420</y>
       <width>50</width>
       <height>50</height>
      </rect>
@@ -819,8 +999,8 @@
    <widget class="QPushButton" name="btnB">
     <property name="geometry">
      <rect>
-      <x>665</x>
-      <y>345</y>
+      <x>670</x>
+      <y>475</y>
       <width>50</width>
       <height>50</height>
      </rect>
@@ -832,8 +1012,8 @@
    <widget class="QPushButton" name="btnBp">
     <property name="geometry">
      <rect>
-      <x>720</x>
-      <y>345</y>
+      <x>725</x>
+      <y>475</y>
       <width>50</width>
       <height>50</height>
      </rect>
@@ -845,8 +1025,8 @@
    <widget class="QPushButton" name="btnB2">
     <property name="geometry">
      <rect>
-      <x>775</x>
-      <y>345</y>
+      <x>780</x>
+      <y>475</y>
       <width>50</width>
       <height>50</height>
      </rect>
@@ -858,11 +1038,14 @@
    <widget class="QGraphicsView" name="qB7">
     <property name="geometry">
      <rect>
-      <x>655</x>
-      <y>60</y>
+      <x>660</x>
+      <y>190</y>
       <width>270</width>
       <height>375</height>
      </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
     </property>
    </widget>
    <widget class="QGraphicsView" name="qB2">
@@ -874,6 +1057,9 @@
       <height>150</height>
      </rect>
     </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
    </widget>
    <widget class="QGraphicsView" name="qB5">
     <property name="geometry">
@@ -883,6 +1069,9 @@
       <width>150</width>
       <height>150</height>
      </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
     </property>
    </widget>
    <widget class="QGraphicsView" name="qB4">
@@ -894,6 +1083,9 @@
       <height>150</height>
      </rect>
     </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
    </widget>
    <widget class="QGraphicsView" name="qB3">
     <property name="geometry">
@@ -903,6 +1095,9 @@
       <width>150</width>
       <height>150</height>
      </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
     </property>
    </widget>
    <widget class="QGraphicsView" name="qB1">
@@ -914,6 +1109,12 @@
       <height>150</height>
      </rect>
     </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Sunken</enum>
+    </property>
    </widget>
    <widget class="QGraphicsView" name="qB6">
     <property name="geometry">
@@ -922,6 +1123,929 @@
       <y>325</y>
       <width>150</width>
       <height>150</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnBlank">
+    <property name="geometry">
+     <rect>
+      <x>840</x>
+      <y>220</y>
+      <width>80</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Blank</string>
+    </property>
+   </widget>
+   <widget class="QGraphicsView" name="qB12">
+    <property name="geometry">
+     <rect>
+      <x>755</x>
+      <y>100</y>
+      <width>80</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+   </widget>
+   <widget class="QGraphicsView" name="qB13">
+    <property name="geometry">
+     <rect>
+      <x>850</x>
+      <y>100</y>
+      <width>80</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+   </widget>
+   <widget class="QGraphicsView" name="qB8">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>10</y>
+      <width>80</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+   </widget>
+   <widget class="QGraphicsView" name="qB9">
+    <property name="geometry">
+     <rect>
+      <x>755</x>
+      <y>10</y>
+      <width>80</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+   </widget>
+   <widget class="QGraphicsView" name="qB10">
+    <property name="geometry">
+     <rect>
+      <x>850</x>
+      <y>10</y>
+      <width>80</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+   </widget>
+   <widget class="QGraphicsView" name="qB11">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>100</y>
+      <width>80</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+   </widget>
+   <widget class="QGraphicsView" name="qWhite">
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>20</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+   </widget>
+   <widget class="QGraphicsView" name="qOrange">
+    <property name="geometry">
+     <rect>
+      <x>765</x>
+      <y>20</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+   </widget>
+   <widget class="QGraphicsView" name="qGreen">
+    <property name="geometry">
+     <rect>
+      <x>860</x>
+      <y>20</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+   </widget>
+   <widget class="QGraphicsView" name="qRed">
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>110</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+   </widget>
+   <widget class="QGraphicsView" name="qBlue">
+    <property name="geometry">
+     <rect>
+      <x>765</x>
+      <y>110</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+   </widget>
+   <widget class="QGraphicsView" name="qYellow">
+    <property name="geometry">
+     <rect>
+      <x>860</x>
+      <y>110</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn03">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>20</y>
+      <width>40</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="contextMenuPolicy">
+     <enum>Qt::PreventContextMenu</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn04">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>20</y>
+      <width>40</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn05">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>20</y>
+      <width>40</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn13">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>70</y>
+      <width>40</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn15">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>70</y>
+      <width>40</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn23">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>120</y>
+      <width>40</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn24">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>120</y>
+      <width>40</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn25">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>120</y>
+      <width>40</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn30">
+    <property name="geometry">
+     <rect>
+      <x>25</x>
+      <y>175</y>
+      <width>40</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn31">
+    <property name="geometry">
+     <rect>
+      <x>75</x>
+      <y>175</y>
+      <width>40</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn32">
+    <property name="geometry">
+     <rect>
+      <x>125</x>
+      <y>175</y>
+      <width>40</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn40">
+    <property name="geometry">
+     <rect>
+      <x>25</x>
+      <y>225</y>
+      <width>40</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn42">
+    <property name="geometry">
+     <rect>
+      <x>125</x>
+      <y>225</y>
+      <width>40</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn50">
+    <property name="geometry">
+     <rect>
+      <x>25</x>
+      <y>275</y>
+      <width>40</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn51">
+    <property name="geometry">
+     <rect>
+      <x>75</x>
+      <y>275</y>
+      <width>40</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn52">
+    <property name="geometry">
+     <rect>
+      <x>125</x>
+      <y>275</y>
+      <width>40</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn33">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>175</y>
+      <width>40</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn34">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>175</y>
+      <width>40</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn35">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>175</y>
+      <width>40</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn39">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>175</y>
+      <width>40</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn310">
+    <property name="geometry">
+     <rect>
+      <x>540</x>
+      <y>175</y>
+      <width>40</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn311">
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>175</y>
+      <width>40</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn43">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>225</y>
+      <width>40</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn45">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>225</y>
+      <width>40</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn49">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>225</y>
+      <width>40</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn411">
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>225</y>
+      <width>40</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn46">
+    <property name="geometry">
+     <rect>
+      <x>335</x>
+      <y>225</y>
+      <width>40</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn48">
+    <property name="geometry">
+     <rect>
+      <x>435</x>
+      <y>225</y>
+      <width>40</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn36">
+    <property name="geometry">
+     <rect>
+      <x>335</x>
+      <y>175</y>
+      <width>40</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn37">
+    <property name="geometry">
+     <rect>
+      <x>385</x>
+      <y>175</y>
+      <width>40</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn38">
+    <property name="geometry">
+     <rect>
+      <x>435</x>
+      <y>175</y>
+      <width>40</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn53">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>275</y>
+      <width>40</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn54">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>275</y>
+      <width>40</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn55">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>275</y>
+      <width>40</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn56">
+    <property name="geometry">
+     <rect>
+      <x>335</x>
+      <y>275</y>
+      <width>40</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn57">
+    <property name="geometry">
+     <rect>
+      <x>385</x>
+      <y>275</y>
+      <width>40</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn58">
+    <property name="geometry">
+     <rect>
+      <x>435</x>
+      <y>275</y>
+      <width>40</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn59">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>275</y>
+      <width>40</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn510">
+    <property name="geometry">
+     <rect>
+      <x>540</x>
+      <y>275</y>
+      <width>40</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn511">
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>275</y>
+      <width>40</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn63">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>330</y>
+      <width>40</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn64">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>330</y>
+      <width>40</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn65">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>330</y>
+      <width>40</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn73">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>380</y>
+      <width>40</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn75">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>380</y>
+      <width>40</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn83">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>430</y>
+      <width>40</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn84">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>430</y>
+      <width>40</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn85">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>430</y>
+      <width>40</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnWhite">
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>20</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnOrange">
+    <property name="geometry">
+     <rect>
+      <x>765</x>
+      <y>20</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnGreen">
+    <property name="geometry">
+     <rect>
+      <x>860</x>
+      <y>20</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnRed">
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>110</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnBlue">
+    <property name="geometry">
+     <rect>
+      <x>765</x>
+      <y>110</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnYellow">
+    <property name="geometry">
+     <rect>
+      <x>860</x>
+      <y>110</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="leScramble">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>550</y>
+      <width>591</width>
+      <height>27</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>530</y>
+      <width>71</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Scramble:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>590</y>
+      <width>71</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Solution:</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="txtSolution">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>610</y>
+      <width>591</width>
+      <height>171</height>
      </rect>
     </property>
    </widget>
