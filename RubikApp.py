@@ -19,10 +19,12 @@ class RubikApp(QMainWindow, Ui_MainWindow):
                         self.btnR, self.btnRp, self.btnR2,
                         self.btnF, self.btnFp, self.btnF2,
                         self.btnB, self.btnBp, self.btnB2]
+        self.speed = 100 - self.sliSpeed.value()
         self.moves = [U, Up, U2, D, Dp, D2, L, Lp, L2, R, Rp, R2, F, Fp, F2, B, Bp, B2]
 
         # Define connections.
         for i in range(18): self.buttons[i].clicked.connect(self.moveHandler(self.moves[i]))
+        self.sliSpeed.valueChanged.connect(self.setSpeed)
         self.btnBlank.clicked.connect(self.blank)
         self.btnScramble.clicked.connect(self.scramble)
         self.btnSolve.clicked.connect(self.solve)
@@ -129,6 +131,11 @@ class RubikApp(QMainWindow, Ui_MainWindow):
             for j in range(12):
                 if self.btnFacets[i][j]: self.btnFacets[i][j].setEnabled(op)
 
+    def setSpeed(self):
+        if self.sliSpeed.value() < 99:
+            self.speed = 100 - self.sliSpeed.value()
+        else: self.speed = 0
+
     def update(self):
         # Set the color of each facet.
         for (i, j), facet in np.ndenumerate(self.cube.puz):
@@ -144,7 +151,7 @@ class RubikApp(QMainWindow, Ui_MainWindow):
         self.update()
 
         # Break wait down to increase responsiveness.
-        for i in range(100 - self.sliSpeed.value()):
+        for i in range(self.speed):
             time.sleep(0.005)
             QApplication.processEvents()
 
