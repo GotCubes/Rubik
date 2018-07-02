@@ -2,9 +2,6 @@ import sys
 from PySide.QtGui import *
 from rubikUI import *
 from rubik import *
-from algorithms import *
-import random
-import time
 
 class RubikApp(QMainWindow, Ui_MainWindow):
     def __init__(self, parent=None):

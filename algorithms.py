@@ -3,35 +3,41 @@
 from moves import *
 
 def locateEdge(cube, c1, c2):
+    # Return the location of the (c1, c2) edge.
     for edge in cube.edges:
         if cube.puz[edge[0]] == c1 and cube.puz[edge[1]] == c2: return edge[0], edge[1]
         elif cube.puz[edge[1]] == c1 and cube.puz[edge[0]] == c2: return edge[1], edge[0]
 
 def locateCorner(cube, c1, c2, c3):
+    # Return the location of the (c1, c2, c3) corner.
     for corner in cube.corners:
         if cube.puz[corner[0]] == c1 and cube.puz[corner[1]] == c2 and cube.puz[corner[2]] == c3: return corner[0], corner[1], corner[2]
         elif cube.puz[corner[1]] == c1 and cube.puz[corner[2]] == c2 and cube.puz[corner[0]] == c3: return corner[1], corner[2], corner[0]
         elif cube.puz[corner[2]] == c1 and cube.puz[corner[0]] == c2 and cube.puz[corner[1]] == c3: return corner[2], corner[0], corner[1]
 
 def locateEdgeOri(cube):
+    # Return the edge orientation case.
     case = ()
     for facet in [(2, 4), (1, 3), (0, 4), (1, 5)]:
         if cube.puz[facet] == "W": case += facet,
     return case
 
 def locateCornerOri(cube):
+    # Return the corner orientation case.
     case = ()
     for facet in [(3, 0), (3, 2), (3, 3), (3, 5), (3, 6), (3, 8), (3, 9), (3, 11)]:
         if cube.puz[facet] == "W": case += facet,
     return case
 
 def locateCornerPerm(cube):
+    # Return the corner permutation case.
     case = ()
     for pair in [((3, 0), (3, 2)), ((3, 3), (3, 5)), ((3, 6), (3, 8)), ((3, 9), (3, 11))]:
         if cube.puz[pair[0]] == cube.puz[pair[1]]: case += pair
     return case
 
 def locateEdgePerm(cube):
+    # Return the edge permutation case.
     case = ()
     for pair in [((3, 0), (3, 1)), ((3, 3), (3, 4)), ((3, 6), (3, 7)), ((3, 9), (3, 10)),
                  ((3, 1), (3, 3)), ((3, 4), (3, 6)), ((3, 7), (3, 9)), ((3, 10), (3, 0)),
