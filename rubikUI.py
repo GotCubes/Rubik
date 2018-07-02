@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'rubikUI.ui'
 #
-# Created: Mon Jul  2 09:06:42 2018
+# Created: Mon Jul  2 09:59:15 2018
 #      by: PyQt4 UI code generator 4.6.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -555,6 +555,7 @@ class Ui_MainWindow(object):
         self.btnYellow.setObjectName("btnYellow")
         self.leScramble = QtGui.QLineEdit(self.centralwidget)
         self.leScramble.setGeometry(QtCore.QRect(30, 550, 591, 27))
+        self.leScramble.setReadOnly(True)
         self.leScramble.setObjectName("leScramble")
         self.label = QtGui.QLabel(self.centralwidget)
         self.label.setGeometry(QtCore.QRect(30, 530, 71, 17))
@@ -564,6 +565,7 @@ class Ui_MainWindow(object):
         self.label_2.setObjectName("label_2")
         self.txtSolution = QtGui.QTextEdit(self.centralwidget)
         self.txtSolution.setGeometry(QtCore.QRect(30, 610, 591, 171))
+        self.txtSolution.setReadOnly(True)
         self.txtSolution.setObjectName("txtSolution")
         MainWindow.setCentralWidget(self.centralwidget)
 

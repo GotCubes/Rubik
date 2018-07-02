@@ -217,65 +217,77 @@ algsYGR = {((6, 5), (5, 5), (5, 6)): [],
            ((3, 5), (2, 5), (3, 6)): [Fp, Up, F],
            ((3, 6), (3, 5), (2, 5)): [R, U, Rp]}
 
+# Right insert.
+# Green U, R, Up, Rp, Up, Fp, U, F
+# Orange U, F, Up, Fp, Up, Lp, U, L
+# Blue U, L, Up, Lp, Up, Bp, U, B
+# Red U, B, Up, Bp, Up, Rp, U, R
+
+# Left insert.
+# Green Up, Lp, U, L, U, F, Up, Fp
+# Orange Up, Bp, U, B, U, L, Up, Lp
+# Blue Up, Rp, U, R, U, B, Up, Bp
+# Red Up, Fp, U, F, U, R, Up, Rp
+
 # Green / Orange edge.
 algsGO = {((4, 3), (4, 2)): [],
-          ((4, 2), (4, 3)): [L, U, L, U, L, Up, Lp, Up, Lp, U, Fp, Up, Fp, Up, Fp, U, F, U, F],
-          ((4, 0), (4, 11)): [B, U, B, U, B, Up, Bp, Up, Bp, U, L, U, L, U, L, Up, Lp, Up, Lp],
-          ((4, 11), (4, 0)): [B, U, B, U, B, Up, Bp, Up, Bp, Fp, Up, Fp, Up, Fp, U, F, U, F],
-          ((4, 9), (4, 8)): [R, U, R, U, R, Up, Rp, Up, Rp, L, U, L, U, L, Up, Lp, Up, Lp],
-          ((4, 8), (4, 9)): [R, U, R, U, R, Up, Rp, Up, Rp, Up, Fp, Up, Fp, Up, Fp, U, F, U, F],
-          ((4, 6), (4, 5)): [Rp, Up, Rp, Up, Rp, U, R, U, R, Up, Fp, Up, Fp, Up, Fp, U, F, U, F],
-          ((4, 5), (4, 6)): [Rp, Up, Rp, Up, Rp, U, R, U, R, L, U, L, U, L, Up, Lp, Up, Lp],
-          ((2, 4), (3, 4)): [U, L, U, L, U, L, Up, Lp, Up, Lp],
-          ((3, 4), (2, 4)): [Fp, Up, Fp, Up, Fp, U, F, U, F],
-          ((1, 3), (3, 1)): [L, U, L, U, L, Up, Lp, Up, Lp],
-          ((3, 1), (1, 3)): [Up, Fp, Up, Fp, Up, Fp, U, F, U, F],
-          ((0, 4), (3, 10)): [Up, L, U, L, U, L, Up, Lp, Up, Lp],
-          ((3, 10), (0, 4)): [U2, Fp, Up, Fp, Up, Fp, U, F, U, F],
-          ((1, 5), (3, 7)): [U2, L, U, L, U, L, Up, Lp, Up, Lp],
-          ((3, 7), (1, 5)): [U, Fp, Up, Fp, Up, Fp, U, F, U, F]}
+          ((4, 2), (4, 3)): [F, U, Fp, Up, Lp, Up, L, Up, F, Up, Fp, Up, Lp, U, L],
+          ((4, 0), (4, 11)): [L, Up, Lp, Up, Bp, U, B, Up, Lp, U, L, U, F, Up, Fp],
+          ((4, 11), (4, 0)): [L, Up, Lp, Up, Bp, U, B, U2, F, Up, Fp, Up, Lp, U, L],
+          ((4, 9), (4, 8)): [B, U, Bp, Up, Rp, Up, R, U2, Lp, U, L, U, F, Up, Fp],
+          ((4, 8), (4, 9)): [B, U, Bp, Up, Rp, Up, R, U, F, Up, Fp, Up, Lp, U, L],
+          ((4, 6), (4, 5)): [Fp, U, F, U, R, Up, Rp, U, F, Up, Fp, Up, Lp, U, L],
+          ((4, 5), (4, 6)): [Fp, U, F, U, R, Up, Rp, U2, Lp, U, L, U, F, Up, Fp],
+          ((2, 4), (3, 4)): [U2, F, Up, Fp, Up, Lp, U, L],
+          ((3, 4), (2, 4)): [Up, Lp, U, L, U, F, Up, Fp],
+          ((1, 3), (3, 1)): [U, F, Up, Fp, Up, Lp, U, L],
+          ((3, 1), (1, 3)): [U2, Lp, U, L, U, F, Up, Fp],
+          ((0, 4), (3, 10)): [F, Up, Fp, Up, Lp, U, L],
+          ((3, 10), (0, 4)): [U, Lp, U, L, U, F, Up, Fp],
+          ((1, 5), (3, 7)): [Up, F, Up, Fp, Up, Lp, U, L],
+          ((3, 7), (1, 5)): [Lp, U, L, U, F, Up, Fp]}
 
 # Orange / Blue edge.
 algsOB = {((4, 0), (4, 11)): [],
-          ((4, 11), (4, 0)): [B, U, B, U, B, Up, Bp, Up, Bp, U, Lp, Up, Lp, Up, Lp, U, L, U, L],
-          ((4, 9), (4, 8)): [R, U, R, U, R, Up, Rp, Up, Rp, U, B, U, B, U, B, Up, Bp, Up, Bp],
-          ((4, 8), (4, 9)): [R, U, R, U, R, Up, Rp, Up, Rp, Lp, Up, Lp, Up, Lp, U, L, U, L],
-          ((4, 6), (4, 5)): [Rp, Up, Rp, Up, Rp, U, R, U, R, Lp, Up, Lp, Up, Lp, U, L, U, L],
-          ((4, 5), (4, 6)): [Rp, Up, Rp, Up, Rp, U, R, U, R, U, B, U, B, U, B, Up, Bp, Up, Bp],
-          ((2, 4), (3, 4)): [U2, B, U, B, U, B, Up, Bp, Up, Bp],
-          ((3, 4), (2, 4)): [U, Lp, Up, Lp, Up, Lp, U, L, U, L],
-          ((1, 3), (3, 1)): [U, B, U, B, U, B, Up, Bp, Up, Bp],
-          ((3, 1), (1, 3)): [Lp, Up, Lp, Up, Lp, U, L, U, L],
-          ((0, 4), (3, 10)): [B, U, B, U, B, Up, Bp, Up, Bp],
-          ((3, 10), (0, 4)): [Up, Lp, Up, Lp, Up, Lp, U, L, U, L],
-          ((1, 5), (3, 7)): [Up, B, U, B, U, B, Up, Bp, Up, Bp],
-          ((3, 7), (1, 5)): [U2, Lp, Up, Lp, Up, Lp, U, L, U, L]}
+          ((4, 11), (4, 0)): [L, U, Lp, Up, Bp, Up, B, Up, L, U, Lp, Up, Bp, Up, B],
+          ((4, 9), (4, 8)): [B, U, Bp, Up, Rp, Up, R, Up, Bp, U, B, U, L, Up, Lp],
+          ((4, 8), (4, 9)): [B, U, Bp, Up, Rp, Up, R, U2, L, Up, Lp, Up, Bp, U, B],
+          ((4, 6), (4, 5)): [R, U, Rp, Up, Fp, Up, F, U2, Bp, U, B, U, L, Up, Lp],
+          ((4, 5), (4, 6)): [R, U, Rp, Up, Fp, Up, F, U, L, Up, Lp, Up, Bp, U, B],
+          ((2, 4), (3, 4)): [Up, L, Up, Lp, Up, Bp, U, B],
+          ((3, 4), (2, 4)): [Bp, U, B, U, L, Up, Lp],
+          ((1, 3), (3, 1)): [U2, L, Up, Lp, Up, Bp, U, B],
+          ((3, 1), (1, 3)): [Up, Bp, U, B, U, L, Up, Lp],
+          ((0, 4), (3, 10)): [U, L, Up, Lp, Up, Bp, U, B],
+          ((3, 10), (0, 4)): [U2, Bp, U, B, U, L, Up, Lp],
+          ((1, 5), (3, 7)): [L, Up, Lp, Up, Bp, U, B],
+          ((3, 7), (1, 5)): [U, Bp, U, B, U, L, Up, Lp]}
 
 # Blue / Red edge.
 algsBR = {((4, 9), (4, 8)): [],
-          ((4, 8), (4, 9)): [R, U, R, U, R, Up, Rp, Up, Rp, U, Bp, Up, Bp, Up, Bp, U, B, U, B],
-          ((4, 6), (4, 5)): [F, U, F, U, F, Up, Fp, Up, Fp, U, R, U, R, U, R, Up, Rp, Up, Rp],
-          ((4, 5), (4, 6)): [Rp, Up, Rp, Up, Rp, U, R, U, R, U2, R, U, R, U, R, Up, Rp, Up, Rp],
-          ((2, 4), (3, 4)): [Up, R, U, R, U, R, Up, Rp, Up, Rp],
-          ((3, 4), (2, 4)): [U2, Bp, Up, Bp, Up, Bp, U, B, U, B],
-          ((1, 3), (3, 1)): [U2, R, U, R, U, R, Up, Rp, Up, Rp],
-          ((3, 1), (1, 3)): [U, Bp, Up, Bp, Up, Bp, U, B, U, B],
-          ((0, 4), (3, 10)): [U, R, U, R, U, R, Up, Rp, Up, Rp],
-          ((3, 10), (0, 4)): [Bp, Up, Bp, Up, Bp, U, B, U, B],
-          ((1, 5), (3, 7)): [R, U, R, U, R, Up, Rp, Up, Rp],
-          ((3, 7), (1, 5)): [Up, Bp, Up, Bp, Up, Bp, U, B, U, B]}
+          ((4, 8), (4, 9)): [B, U, Bp, Up, Rp, Up, R, Up, B, U, Bp, Up, Rp, Up, R],
+          ((4, 6), (4, 5)): [R, U, Rp, Up, Fp, Up, F, Up, Rp, U, R, U, B, Up, Bp],
+          ((4, 5), (4, 6)): [R, U, Rp, Up, Fp, Up, F, U2, B, Up, Bp, Up, Rp, U, R],
+          ((2, 4), (3, 4)): [B, Up, Bp, Up, Rp, U, R],
+          ((3, 4), (2, 4)): [U, Rp, U, R, U, B, Up, Bp],
+          ((1, 3), (3, 1)): [Up, B, Up, Bp, Up, Rp, U, R],
+          ((3, 1), (1, 3)): [Rp, U, R, U, B, Up, Bp],
+          ((0, 4), (3, 10)): [U2, B, Up, Bp, Up, Rp, U, R],
+          ((3, 10), (0, 4)): [Up, Rp, U, R, U, B, Up, Bp],
+          ((1, 5), (3, 7)): [U, B, Up, Bp, Up, Rp, U, R],
+          ((3, 7), (1, 5)): [U2, Rp, U, R, U, B, Up, Bp]}
 
 # Red / Green edge.
 algsRG = {((4, 6), (4, 5)): [],
-          ((4, 5), (4, 6)): [Rp, Up, Rp, Up, Rp, U, R, U, R, Up, F, U, F, U, F, Up, Fp, Up, Fp],
-          ((2, 4), (3, 4)): [F, U, F, U, F, Up, Fp, Up, Fp],
-          ((3, 4), (2, 4)): [Up, Rp, Up, Rp, Up, Rp, U, R, U, R],
-          ((1, 3), (3, 1)): [Up, F, U, F, U, F, Up, Fp, Up, Fp],
-          ((3, 1), (1, 3)): [U2, Rp, Up, Rp, Up, Rp, U, R, U, R],
-          ((0, 4), (3, 10)): [U2, F, U, F, U, F, Up, Fp, Up, Fp],
-          ((3, 10), (0, 4)): [U, Rp, Up, Rp, Up, Rp, U, R, U, R],
-          ((1, 5), (3, 7)): [U, F, U, F, U, F, Up, Fp, Up, Fp],
-          ((3, 7), (1, 5)): [Rp, Up, Rp, Up, Rp, U, R, U, R]}
+          ((4, 5), (4, 6)): [R, U, Rp, Up, Fp, Up, F, Up, R, U, Rp, Up, Fp, Up, F],
+          ((2, 4), (3, 4)): [U, R, Up, Rp, Up, Fp, U, F],
+          ((3, 4), (2, 4)): [U2, Fp, U, F, U, R, Up, Rp],
+          ((1, 3), (3, 1)): [R, Up, Rp, Up, Fp, U, F],
+          ((3, 1), (1, 3)): [U, Fp, U, F, U, R, Up, Rp],
+          ((0, 4), (3, 10)): [Up, R, Up, Rp, Up, Fp, U, F],
+          ((3, 10), (0, 4)): [Fp, U, F, U, R, Up, Rp],
+          ((1, 5), (3, 7)): [U2, R, Up, Rp, Up, Fp, U, F],
+          ((3, 7), (1, 5)): [Up, Fp, U, F, U, R, Up, Rp]}
 
 # Top layer edge orientation.
 algsEO = {((2, 4), (1, 3), (0, 4), (1, 5)): [],

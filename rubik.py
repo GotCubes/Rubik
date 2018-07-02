@@ -28,7 +28,7 @@ class Cube:
         ret = ""
         for line in self.puz:
             for item in line:
-                if item != "_" : ret += item + " "
+                if item != "_": ret += item + " "
                 else: ret += "  "
             ret += "\n"
 

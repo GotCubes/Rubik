@@ -137,6 +137,7 @@ class RubikApp(QMainWindow, Ui_MainWindow):
         # Update text boxes.
         self.leScramble.setText(self.cube.scramble)
         self.txtSolution.setText(self.cube.solution)
+        self.txtSolution.verticalScrollBar().setValue(self.txtSolution.verticalScrollBar().maximum())
 
     def processScreen(self):
         # Update colors.
@@ -167,8 +168,7 @@ class RubikApp(QMainWindow, Ui_MainWindow):
                 self.cube.solution += move.__name__.replace("p", "'") + " "
                 move(self.cube.puz)
                 self.processScreen()
-        else: self.cube.solution += "Step already completed!"
-        self.cube.solution += "\n"
+            self.cube.solution += "\n"
 
     def isValid(self):
         return locateEdge(self.cube, "Y", "G") and locateEdge(self.cube, "Y", "O") and \
