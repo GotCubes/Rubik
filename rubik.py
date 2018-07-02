@@ -1,6 +1,6 @@
 #! /usr/bin/env python3.4
 
-import numpy as np
+from moves import *
 
 class Cube:
     def __init__(self):
@@ -12,6 +12,8 @@ class Cube:
         self.puz[3:6, 6:9] = 'R'
         self.puz[3:6, 9:12] = 'B'
         self.puz[6:9, 3:6] = 'Y'
+
+        self.moves = [U, Up, U2, D, Dp, D2, L, Lp, L2, R, Rp, R2, F, Fp, F2, B, Bp, B2]
 
         self.edges = [[(6, 4), (5, 4)], [(7, 3), (5, 1)], [(8, 4), (5, 10)], [(7, 5), (5, 7)],
                       [(4, 3), (4, 2)], [(4, 0), (4, 11)], [(4, 9), (4, 8)], [(4, 6), (4, 5)],
