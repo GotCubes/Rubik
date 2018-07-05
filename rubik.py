@@ -16,8 +16,16 @@ class Cube:
         self.puz[3:6, 9:12] = 'B'
         self.puz[6:9, 3:6] = 'Y'
 
+        # Define orientation.
+        self.cU = 'W'
+        self.cD = 'Y'
+        self.cF = 'G'
+        self.cB = 'B'
+        self.cL = 'O'
+        self.cR = 'R'
+
         # Define moveset.
-        self.moves = [U, Up, U2, D, Dp, D2, L, Lp, L2, R, Rp, R2, F, Fp, F2, B, Bp, B2]
+        self.moves = [U, Up, U2, D, Dp, D2, L, Lp, L2, R, Rp, R2, F, Fp, F2, B, Bp, B2, M, Mp, M2]
 
         # Define edge connections.
         self.edges = [[(6, 4), (5, 4)], [(7, 3), (5, 1)], [(8, 4), (5, 10)], [(7, 5), (5, 7)],
@@ -44,6 +52,14 @@ class Cube:
 
         return ret
 
+    def setOrientation(self):
+        self.cU = self.puz[1, 4]
+        self.cD = self.puz[7, 4]
+        self.cF = self.puz[4, 4]
+        self.cB = self.puz[4, 10]
+        self.cL = self.puz[4, 1]
+        self.cR = self.puz[4, 7]
+
     def execute(self, algorithm):
         # Perform each operation in the algorithm.
         self.solLen += len(algorithm)
@@ -59,27 +75,31 @@ class Cube:
             choice = random.choice([move for move in self.moves if move.__name__[0] != choice.__name__[0]])
 
     def solve(self):
+        # Get the proper orientation of the scramble cube.
+        self.setOrientation()
+
         # Fetch the proper algorithm at each step and execute it.
-        self.execute(algsYG[locateEdge(self, "Y", "G")])
-        self.execute(algsYO[locateEdge(self, "Y", "O")])
-        self.execute(algsYB[locateEdge(self, "Y", "B")])
-        self.execute(algsYR[locateEdge(self, "Y", "R")])
-        self.execute(algsYOG[locateCorner(self, "Y", "O", "G")])
-        self.execute(algsYBO[locateCorner(self, "Y", "B", "O")])
-        self.execute(algsYRB[locateCorner(self, "Y", "R", "B")])
-        self.execute(algsYGR[locateCorner(self, "Y", "G", "R")])
-        self.execute(algsGO[locateEdge(self, "G", "O")])
-        self.execute(algsOB[locateEdge(self, "O", "B")])
-        self.execute(algsBR[locateEdge(self, "B", "R")])
-        self.execute(algsRG[locateEdge(self, "R", "G")])
+        self.execute(algsYG[locateEdge(self, self.cD, self.cF)])
+        self.execute(algsYO[locateEdge(self, self.cD, self.cL)])
+        self.execute(algsYB[locateEdge(self, self.cD, self.cB)])
+        self.execute(algsYR[locateEdge(self, self.cD, self.cR)])
+        self.execute(algsYOG[locateCorner(self, self.cD, self.cL, self.cF)])
+        self.execute(algsYBO[locateCorner(self, self.cD, self.cB, self.cL)])
+        self.execute(algsYRB[locateCorner(self, self.cD, self.cR, self.cB)])
+        self.execute(algsYGR[locateCorner(self, self.cD, self.cF, self.cR)])
+        self.execute(algsGO[locateEdge(self, self.cF, self.cL)])
+        self.execute(algsOB[locateEdge(self, self.cL, self.cB)])
+        self.execute(algsBR[locateEdge(self, self.cB, self.cR)])
+        self.execute(algsRG[locateEdge(self, self.cR, self.cF)])
         self.execute(algsEO[locateEdgeOri(self)])
         self.execute(algsCO[locateCornerOri(self)])
         self.execute(algsCP[locateCornerPerm(self)])
         self.execute(algsEP[locateEdgePerm(self)])
-        self.execute(algsFA[self.puz[3, 4]])
+        self.execute(algsFA[locateFinalAlignment(self)])
 
 if __name__ == "__main__":
     cube = Cube()
+
     times = []
     moves = []
 

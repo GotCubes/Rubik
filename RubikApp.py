@@ -30,19 +30,19 @@ class RubikApp(QMainWindow, Ui_MainWindow):
 
         # Facet button overlays.
         self.btnFacets = [[0, 0, 0, self.btn03, self.btn04, self.btn05, 0, 0, 0, 0, 0, 0],
-                          [0, 0, 0, self.btn13, 0, self.btn15, 0, 0, 0, 0, 0, 0],
+                          [0, 0, 0, self.btn13, self.btn14, self.btn15, 0, 0, 0, 0, 0, 0],
                           [0, 0, 0, self.btn23, self.btn24, self.btn25, 0, 0, 0, 0, 0, 0],
                           [self.btn30, self.btn31, self.btn32, self.btn33,
                            self.btn34, self.btn35, self.btn36, self.btn37,
                            self.btn38, self.btn39, self.btn310, self.btn311],
-                          [self.btn40, 0, self.btn42, self.btn43,
-                           0, self.btn45, self.btn46, 0,
-                           self.btn48, self.btn49, 0, self.btn411],
+                          [self.btn40, self.btn41, self.btn42, self.btn43,
+                           self.btn44, self.btn45, self.btn46, self.btn47,
+                           self.btn48, self.btn49, self.btn410, self.btn411],
                           [self.btn50, self.btn51, self.btn52, self.btn53,
                            self.btn54, self.btn55, self.btn56, self.btn57,
                            self.btn58, self.btn59, self.btn510, self.btn511],
                           [0, 0, 0, self.btn63, self.btn64, self.btn65, 0, 0, 0, 0, 0, 0],
-                          [0, 0, 0, self.btn73, 0, self.btn75, 0, 0, 0, 0, 0, 0],
+                          [0, 0, 0, self.btn73, self.btn74, self.btn75, 0, 0, 0, 0, 0, 0],
                           [0, 0, 0, self.btn83, self.btn84, self.btn85, 0, 0, 0, 0, 0, 0]]
 
         # Background components.
@@ -55,7 +55,8 @@ class RubikApp(QMainWindow, Ui_MainWindow):
                          self.btnL, self.btnLp, self.btnL2,
                          self.btnR, self.btnRp, self.btnR2,
                          self.btnF, self.btnFp, self.btnF2,
-                         self.btnB, self.btnBp, self.btnB2]
+                         self.btnB, self.btnBp, self.btnB2,
+                         self.btnM, self.btnMp, self.btnM2]
 
         # Color selection components.
         self.dropBacks = [self.qB8, self.qB9, self.qB10, self.qB11, self.qB12, self.qB13]
@@ -71,8 +72,8 @@ class RubikApp(QMainWindow, Ui_MainWindow):
         self.yellow = QGraphicsScene(); self.yellow.setBackgroundBrush(QColor(255, 255, 1))
         self.black = QGraphicsScene(); self.black.setBackgroundBrush(QColor(0, 0, 0))
         self.sel = QGraphicsScene(); self.sel.setBackgroundBrush(QColor(139, 0, 0))
-        self.colors = {"W": self.white, "O": self.orange, "G": self.green, "R": self.red,
-                       "B": self.blue, "Y": self.yellow, "X": self.black}
+        self.colors = {'W': self.white, 'O': self.orange, 'G': self.green, 'R': self.red,
+                       'B': self.blue, 'Y': self.yellow, 'X': self.black}
         self.colorSel = None
 
         # Render background.
@@ -83,10 +84,8 @@ class RubikApp(QMainWindow, Ui_MainWindow):
         for i in range(9):
             for j in range(12):
                 # Render facet colors.
-                if self.facets[i][j]: self.facets[i][j].raise_()
-
-                # Render facet buttons.
-                if self.btnFacets[i][j]:
+                if self.facets[i][j]:
+                    self.facets[i][j].raise_()
                     self.btnFacets[i][j].raise_()
                     self.btnFacets[i][j].setStyleSheet("border: 0px; background: transparent;")
                     self.btnFacets[i][j].clicked.connect(self.colorSet(i, j))
@@ -97,19 +96,21 @@ class RubikApp(QMainWindow, Ui_MainWindow):
             button.clicked.connect(self.moveHandler(self.cube.moves[i]))
 
         # Render operation buttons.
+        self.btnReset.raise_()
         self.btnBlank.raise_()
         self.btnScramble.raise_()
         self.btnSolve.raise_()
         self.sliSpeed.raise_()
 
         # Connect operation buttons.
+        self.btnReset.clicked.connect(self.reset)
         self.btnBlank.clicked.connect(self.blank)
         self.btnScramble.clicked.connect(self.scramble)
         self.btnSolve.clicked.connect(self.solve)
         self.proDone.hide()
 
         # Render color selection widgets.
-        for i, color in enumerate(["W", "O", "G", "R", "B", "Y"]):
+        for i, color in enumerate(['W', 'O', 'G', 'R', 'B', 'Y']):
             # Render color selection colors.
             self.drops[i].raise_()
             self.drops[i].setScene(self.colors[color])
@@ -147,6 +148,7 @@ class RubikApp(QMainWindow, Ui_MainWindow):
 
     def setLock(self, op):
         # Disable / Enable relevant widgets.
+        self.btnReset.setEnabled(op)
         self.btnBlank.setEnabled(op)
         self.btnScramble.setEnabled(op)
         self.btnSolve.setEnabled(op)
@@ -177,7 +179,7 @@ class RubikApp(QMainWindow, Ui_MainWindow):
             time.sleep(0.005)
             QApplication.processEvents()
 
-    def default(self):
+    def reset(self):
         # Return cube to solved position.
         self.cube.puz[0:3, 3:6] = 'W'
         self.cube.puz[3:6, 0:3] = 'O'
@@ -205,8 +207,7 @@ class RubikApp(QMainWindow, Ui_MainWindow):
         self.cube.solution = ""
         for i in range(9):
             for j in range(12):
-                if self.btnFacets[i][j]:
-                    self.cube.puz[i][j] = "X"
+                if self.facets[i][j]: self.cube.puz[i, j] = 'X'
         self.update()
 
     def scramble(self):
@@ -214,7 +215,7 @@ class RubikApp(QMainWindow, Ui_MainWindow):
         self.setLock(False)
         self.cube.scramble = ""
         self.cube.solution = ""
-        self.default()
+        self.reset()
         scramble = []
         choice = random.choice(self.cube.moves)
 
@@ -235,6 +236,7 @@ class RubikApp(QMainWindow, Ui_MainWindow):
     def solve(self):
         # Prepare cube.
         self.setLock(False)
+        self.cube.setOrientation()
         self.cube.solution = ""
         self.cube.solLen = 0
         self.proDone.setValue(0)
@@ -243,35 +245,35 @@ class RubikApp(QMainWindow, Ui_MainWindow):
         try:
             # Bottom edges.
             self.cube.solution += "=== Bottom Edges ===\n"
-            self.execute(algsYG[locateEdge(self.cube, "Y", "G")])
+            self.execute(algsYG[locateEdge(self.cube, self.cube.cD, self.cube.cF)])
             self.proDone.setValue(6)
-            self.execute(algsYO[locateEdge(self.cube, "Y", "O")])
+            self.execute(algsYO[locateEdge(self.cube, self.cube.cD, self.cube.cL)])
             self.proDone.setValue(12)
-            self.execute(algsYB[locateEdge(self.cube, "Y", "B")])
+            self.execute(algsYB[locateEdge(self.cube, self.cube.cD, self.cube.cB)])
             self.proDone.setValue(18)
-            self.execute(algsYR[locateEdge(self.cube, "Y", "R")])
+            self.execute(algsYR[locateEdge(self.cube, self.cube.cD, self.cube.cR)])
             self.proDone.setValue(24)
 
             # Bottom corners.
             self.cube.solution += "\n=== Bottom Corners ===\n"
-            self.execute(algsYOG[locateCorner(self.cube, "Y", "O", "G")])
+            self.execute(algsYOG[locateCorner(self.cube, self.cube.cD, self.cube.cL, self.cube.cF)])
             self.proDone.setValue(30)
-            self.execute(algsYBO[locateCorner(self.cube, "Y", "B", "O")])
+            self.execute(algsYBO[locateCorner(self.cube, self.cube.cD, self.cube.cB, self.cube.cL)])
             self.proDone.setValue(36)
-            self.execute(algsYRB[locateCorner(self.cube, "Y", "R", "B")])
+            self.execute(algsYRB[locateCorner(self.cube, self.cube.cD, self.cube.cR, self.cube.cB)])
             self.proDone.setValue(42)
-            self.execute(algsYGR[locateCorner(self.cube, "Y", "G", "R")])
+            self.execute(algsYGR[locateCorner(self.cube, self.cube.cD, self.cube.cF, self.cube.cR)])
             self.proDone.setValue(48)
 
             # Middle edges.
             self.cube.solution += "\n=== Middle Edges ===\n"
-            self.execute(algsGO[locateEdge(self.cube, "G", "O")])
+            self.execute(algsGO[locateEdge(self.cube, self.cube.cF, self.cube.cL)])
             self.proDone.setValue(54)
-            self.execute(algsOB[locateEdge(self.cube, "O", "B")])
+            self.execute(algsOB[locateEdge(self.cube, self.cube.cL, self.cube.cB)])
             self.proDone.setValue(60)
-            self.execute(algsBR[locateEdge(self.cube, "B", "R")])
+            self.execute(algsBR[locateEdge(self.cube, self.cube.cB, self.cube.cR)])
             self.proDone.setValue(66)
-            self.execute(algsRG[locateEdge(self.cube, "R", "G")])
+            self.execute(algsRG[locateEdge(self.cube, self.cube.cR, self.cube.cF)])
             self.proDone.setValue(72)
 
             # Top edge orientation.
@@ -293,7 +295,7 @@ class RubikApp(QMainWindow, Ui_MainWindow):
             self.cube.solution += "\n=== Top Edge Permutation ===\n"
             self.execute(algsEP[locateEdgePerm(self.cube)])
             self.proDone.setValue(96)
-            self.execute(algsFA[self.cube.puz[3, 4]])
+            self.execute(algsFA[locateFinalAlignment(self.cube)])
             self.proDone.setValue(100)
 
             # Print solution.
@@ -303,7 +305,7 @@ class RubikApp(QMainWindow, Ui_MainWindow):
             self.cube.solution += "An impossible state was encountered while attempting to solve this step.\n"
             self.cube.solution += "On a physical cube, this is typically the result of swapping stickers.\n"
             self.cube.solution += "Cube reverted to solved state."
-            self.default()
+            self.reset()
 
         finally:
             self.update()

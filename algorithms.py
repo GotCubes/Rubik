@@ -19,14 +19,14 @@ def locateEdgeOri(cube):
     # Return the edge orientation case.
     case = ()
     for facet in [(2, 4), (1, 3), (0, 4), (1, 5)]:
-        if cube.puz[facet] == "W": case += facet,
+        if cube.puz[facet] == cube.cU: case += facet,
     return case
 
 def locateCornerOri(cube):
     # Return the corner orientation case.
     case = ()
     for facet in [(3, 0), (3, 2), (3, 3), (3, 5), (3, 6), (3, 8), (3, 9), (3, 11)]:
-        if cube.puz[facet] == "W": case += facet,
+        if cube.puz[facet] == cube.cU: case += facet,
     return case
 
 def locateCornerPerm(cube):
@@ -44,6 +44,11 @@ def locateEdgePerm(cube):
                  ((3, 1), (3, 11)), ((3, 10), (3, 8)), ((3, 7), (3, 5)), ((3, 4), (3, 2))]:
         if cube.puz[pair[0]] == cube.puz[pair[1]]: case += pair
     return case
+
+def locateFinalAlignment(cube):
+    # Return the final alignment.
+    for edge in [(3, 4), (3, 7), (3, 10), (3, 1)]:
+        if cube.puz[edge] == cube.cF: return edge
 
 # Yellow / Green edge.
 algsYG = {
@@ -456,7 +461,7 @@ algsEP = {
             ((3, 0), (3, 1), (3, 3), (3, 4), (3, 6), (3, 7), (3, 9), (3, 10)): [],
 
             # H
-            (): [R2, U2, R2, U2, R2, U, R2, U2, R2, U2, R2],
+            (): [M2, Up, M2, U2, M2, Up, M2],
 
             # Ua
             ((3, 9), (3, 10), (3, 1), (3, 3), (3, 4), (3, 6)): [R, Up, R, U, R, U, R, Up, Rp, Up, R2],
@@ -471,14 +476,14 @@ algsEP = {
             ((3, 6), (3, 7), (3, 1), (3, 11), (3, 4), (3, 2)): [F2, U, F, U, Fp, Up, Fp, Up, Fp, U, Fp],
 
             # Z
-            ((3, 1), (3, 3), (3, 7), (3, 9), (3, 10), (3, 8), (3, 4), (3, 2)): [Fp, Up, F2, U, F, U, Fp, Up, F, U, F, Up, F, Up, Fp],
-            ((3, 4), (3, 6), (3, 10), (3, 0), (3, 1), (3, 11), (3, 7), (3, 5)): [Rp, Up, R2, U, R, U, Rp, Up, R, U, R, Up, R, Up, Rp]
+            ((3, 1), (3, 3), (3, 7), (3, 9), (3, 10), (3, 8), (3, 4), (3, 2)): [M2, Up, M2, Up, Mp, U2, M2, U2, Mp],
+            ((3, 4), (3, 6), (3, 10), (3, 0), (3, 1), (3, 11), (3, 7), (3, 5)): [M2, U, M2, U, Mp, U2, M2, U2, Mp]
          }
 
 # Final alignment.
 algsFA = {
-            "G": [],
-            "R": [Up],
-            "B": [U2],
-            "O": [U]
+            (3, 4): [],
+            (3, 7): [U],
+            (3, 1): [Up],
+            (3, 10): [U2]
          }
