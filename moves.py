@@ -95,22 +95,58 @@ def R2(puz):
     puz[2:7, 2:7] = np.rot90(puz[2:7, 2:7], 2)
     translate(puz, 1)
 
-# Middle slice operations.
+# Middle layer operations.
 def M(puz):
-    slice = np.roll(np.concatenate((puz[:, 4], puz[3:6, 10])), 3)
-    puz[0:3, 4] = slice[2::-1]
-    puz[3:9, 4] = slice[3:9]
-    puz[3:6, 10] = slice[11:8:-1]
+    layer = np.roll(np.concatenate((puz[:, 4], puz[3:6, 10])), 3)
+    puz[0:3, 4] = layer[2::-1]
+    puz[3:9, 4] = layer[3:9]
+    puz[3:6, 10] = layer[11:8:-1]
 
 def Mp(puz):
-    slice = np.roll(np.concatenate((puz[:, 4], puz[3:6, 10])), -3)
-    puz[0:6, 4] = slice[0:6]
-    puz[6:9, 4] = slice[8:5:-1]
-    puz[3:6, 10] = slice[11:8:-1]
+    layer = np.roll(np.concatenate((puz[:, 4], puz[3:6, 10])), -3)
+    puz[0:6, 4] = layer[0:6]
+    puz[6:9, 4] = layer[8:5:-1]
+    puz[3:6, 10] = layer[11:8:-1]
 
 def M2(puz):
-    slice = np.roll(np.concatenate((puz[:, 4], puz[3:6, 10])), 6)
-    puz[0:3, 4] = slice[0:3]
-    puz[3:6, 4] = slice[5:2:-1]
-    puz[6:9, 4] = slice[6:9]
-    puz[3:6, 10] = slice[11:8:-1]
+    layer = np.roll(np.concatenate((puz[:, 4], puz[3:6, 10])), 6)
+    puz[0:3, 4] = layer[0:3]
+    puz[3:6, 4] = layer[5:2:-1]
+    puz[6:9, 4] = layer[6:9]
+    puz[3:6, 10] = layer[11:8:-1]
+
+# Equatorial slice operations.
+def E(puz):
+    puz[4] = np.roll(puz[4, :], 3)
+
+def Ep(puz):
+    puz[4] = np.roll(puz[4, :], -3)
+
+def E2(puz):
+    puz[4] = np.roll(puz[4, :], 6)
+
+# Standing layer operations.
+def S(puz):
+    translate(puz, -1)
+    layer = np.roll(np.concatenate((puz[:, 4], puz[3:6, 10])), 3)
+    puz[0:3, 4] = layer[2::-1]
+    puz[3:9, 4] = layer[3:9]
+    puz[3:6, 10] = layer[11:8:-1]
+    translate(puz, 1)
+
+def Sp(puz):
+    translate(puz, -1)
+    layer = np.roll(np.concatenate((puz[:, 4], puz[3:6, 10])), -3)
+    puz[0:6, 4] = layer[0:6]
+    puz[6:9, 4] = layer[8:5:-1]
+    puz[3:6, 10] = layer[11:8:-1]
+    translate(puz, 1)
+
+def S2(puz):
+    translate(puz, -1)
+    layer = np.roll(np.concatenate((puz[:, 4], puz[3:6, 10])), 6)
+    puz[0:3, 4] = layer[0:3]
+    puz[3:6, 4] = layer[5:2:-1]
+    puz[6:9, 4] = layer[6:9]
+    puz[3:6, 10] = layer[11:8:-1]
+    translate(puz, 1)

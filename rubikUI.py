@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'rubikUI.ui'
 #
-# Created: Thu Jul  5 16:02:40 2018
+# Created: Thu Jul  5 16:36:01 2018
 #      by: PyQt4 UI code generator 4.6.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -238,13 +238,13 @@ class Ui_MainWindow(object):
         self.q73.setFrameShape(QtGui.QFrame.NoFrame)
         self.q73.setObjectName("q73")
         self.btnScramble = QtGui.QPushButton(self.centralwidget)
-        self.btnScramble.setGeometry(QtCore.QRect(840, 395, 80, 80))
+        self.btnScramble.setGeometry(QtCore.QRect(840, 460, 80, 80))
         self.btnScramble.setObjectName("btnScramble")
         self.btnSolve = QtGui.QPushButton(self.centralwidget)
-        self.btnSolve.setGeometry(QtCore.QRect(840, 485, 80, 80))
+        self.btnSolve.setGeometry(QtCore.QRect(840, 570, 80, 80))
         self.btnSolve.setObjectName("btnSolve")
         self.sliSpeed = QtGui.QSlider(self.centralwidget)
-        self.sliSpeed.setGeometry(QtCore.QRect(675, 590, 241, 20))
+        self.sliSpeed.setGeometry(QtCore.QRect(675, 700, 241, 20))
         self.sliSpeed.setSliderPosition(80)
         self.sliSpeed.setOrientation(QtCore.Qt.Horizontal)
         self.sliSpeed.setTickPosition(QtGui.QSlider.NoTicks)
@@ -311,7 +311,7 @@ class Ui_MainWindow(object):
         self.btnB2.setGeometry(QtCore.QRect(780, 475, 50, 50))
         self.btnB2.setObjectName("btnB2")
         self.qB7 = QtGui.QGraphicsView(self.centralwidget)
-        self.qB7.setGeometry(QtCore.QRect(660, 190, 270, 431))
+        self.qB7.setGeometry(QtCore.QRect(660, 190, 270, 541))
         self.qB7.setFrameShape(QtGui.QFrame.NoFrame)
         self.qB7.setObjectName("qB7")
         self.qB2 = QtGui.QGraphicsView(self.centralwidget)
@@ -340,7 +340,7 @@ class Ui_MainWindow(object):
         self.qB6.setFrameShape(QtGui.QFrame.NoFrame)
         self.qB6.setObjectName("qB6")
         self.btnBlank = QtGui.QPushButton(self.centralwidget)
-        self.btnBlank.setGeometry(QtCore.QRect(840, 305, 80, 80))
+        self.btnBlank.setGeometry(QtCore.QRect(840, 350, 80, 80))
         self.btnBlank.setObjectName("btnBlank")
         self.qB12 = QtGui.QGraphicsView(self.centralwidget)
         self.qB12.setGeometry(QtCore.QRect(755, 100, 80, 80))
@@ -595,8 +595,26 @@ class Ui_MainWindow(object):
         self.btnM2.setGeometry(QtCore.QRect(780, 530, 50, 50))
         self.btnM2.setObjectName("btnM2")
         self.btnReset = QtGui.QPushButton(self.centralwidget)
-        self.btnReset.setGeometry(QtCore.QRect(840, 215, 80, 80))
+        self.btnReset.setGeometry(QtCore.QRect(840, 240, 80, 80))
         self.btnReset.setObjectName("btnReset")
+        self.btnE = QtGui.QPushButton(self.centralwidget)
+        self.btnE.setGeometry(QtCore.QRect(670, 585, 50, 50))
+        self.btnE.setObjectName("btnE")
+        self.btnEp = QtGui.QPushButton(self.centralwidget)
+        self.btnEp.setGeometry(QtCore.QRect(725, 585, 50, 50))
+        self.btnEp.setObjectName("btnEp")
+        self.btnE2 = QtGui.QPushButton(self.centralwidget)
+        self.btnE2.setGeometry(QtCore.QRect(780, 585, 50, 50))
+        self.btnE2.setObjectName("btnE2")
+        self.btnS2 = QtGui.QPushButton(self.centralwidget)
+        self.btnS2.setGeometry(QtCore.QRect(780, 640, 50, 50))
+        self.btnS2.setObjectName("btnS2")
+        self.btnSp = QtGui.QPushButton(self.centralwidget)
+        self.btnSp.setGeometry(QtCore.QRect(725, 640, 50, 50))
+        self.btnSp.setObjectName("btnSp")
+        self.btnS = QtGui.QPushButton(self.centralwidget)
+        self.btnS.setGeometry(QtCore.QRect(670, 640, 50, 50))
+        self.btnS.setObjectName("btnS")
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
@@ -631,4 +649,10 @@ class Ui_MainWindow(object):
         self.btnMp.setText(QtGui.QApplication.translate("MainWindow", "M\'", None, QtGui.QApplication.UnicodeUTF8))
         self.btnM2.setText(QtGui.QApplication.translate("MainWindow", "M2", None, QtGui.QApplication.UnicodeUTF8))
         self.btnReset.setText(QtGui.QApplication.translate("MainWindow", "Reset", None, QtGui.QApplication.UnicodeUTF8))
+        self.btnE.setText(QtGui.QApplication.translate("MainWindow", "E", None, QtGui.QApplication.UnicodeUTF8))
+        self.btnEp.setText(QtGui.QApplication.translate("MainWindow", "E\'", None, QtGui.QApplication.UnicodeUTF8))
+        self.btnE2.setText(QtGui.QApplication.translate("MainWindow", "E2", None, QtGui.QApplication.UnicodeUTF8))
+        self.btnS2.setText(QtGui.QApplication.translate("MainWindow", "S2", None, QtGui.QApplication.UnicodeUTF8))
+        self.btnSp.setText(QtGui.QApplication.translate("MainWindow", "S\'", None, QtGui.QApplication.UnicodeUTF8))
+        self.btnS.setText(QtGui.QApplication.translate("MainWindow", "S", None, QtGui.QApplication.UnicodeUTF8))
 

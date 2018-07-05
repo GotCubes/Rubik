@@ -10,6 +10,15 @@ class RubikApp(QMainWindow, Ui_MainWindow):
 
         # Initialize cube.
         self.cube = Cube()
+        self.moveset = [U, Up, U2,
+                        D, Dp, D2,
+                        L, Lp, L2,
+                        R, Rp, R2,
+                        F, Fp, F2,
+                        B, Bp, B2,
+                        M, Mp, M2,
+                        E, Ep, E2,
+                        S, Sp, S2]
 
         # Facet displays.
         self.facets = [[0, 0, 0, self.q03, self.q04, self.q05, 0, 0, 0, 0, 0, 0],
@@ -56,7 +65,9 @@ class RubikApp(QMainWindow, Ui_MainWindow):
                          self.btnR, self.btnRp, self.btnR2,
                          self.btnF, self.btnFp, self.btnF2,
                          self.btnB, self.btnBp, self.btnB2,
-                         self.btnM, self.btnMp, self.btnM2]
+                         self.btnM, self.btnMp, self.btnM2,
+                         self.btnE, self.btnEp, self.btnE2,
+                         self.btnS, self.btnSp, self.btnS2]
 
         # Color selection components.
         self.dropBacks = [self.qB8, self.qB9, self.qB10, self.qB11, self.qB12, self.qB13]
@@ -93,7 +104,7 @@ class RubikApp(QMainWindow, Ui_MainWindow):
         # Render movement buttons.
         for i, button in enumerate(self.btnMoves):
             button.raise_()
-            button.clicked.connect(self.moveHandler(self.cube.moves[i]))
+            button.clicked.connect(self.moveHandler(self.moveset[i]))
 
         # Render operation buttons.
         self.btnReset.raise_()

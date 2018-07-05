@@ -738,7 +738,7 @@
     <property name="geometry">
      <rect>
       <x>840</x>
-      <y>395</y>
+      <y>460</y>
       <width>80</width>
       <height>80</height>
      </rect>
@@ -751,7 +751,7 @@
     <property name="geometry">
      <rect>
       <x>840</x>
-      <y>485</y>
+      <y>570</y>
       <width>80</width>
       <height>80</height>
      </rect>
@@ -764,7 +764,7 @@
     <property name="geometry">
      <rect>
       <x>675</x>
-      <y>590</y>
+      <y>700</y>
       <width>241</width>
       <height>20</height>
      </rect>
@@ -1041,7 +1041,7 @@
       <x>660</x>
       <y>190</y>
       <width>270</width>
-      <height>431</height>
+      <height>541</height>
      </rect>
     </property>
     <property name="frameShape">
@@ -1133,7 +1133,7 @@
     <property name="geometry">
      <rect>
       <x>840</x>
-      <y>305</y>
+      <y>350</y>
       <width>80</width>
       <height>80</height>
      </rect>
@@ -2176,13 +2176,91 @@
     <property name="geometry">
      <rect>
       <x>840</x>
-      <y>215</y>
+      <y>240</y>
       <width>80</width>
       <height>80</height>
      </rect>
     </property>
     <property name="text">
      <string>Reset</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnE">
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>585</y>
+      <width>50</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>E</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnEp">
+    <property name="geometry">
+     <rect>
+      <x>725</x>
+      <y>585</y>
+      <width>50</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>E'</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnE2">
+    <property name="geometry">
+     <rect>
+      <x>780</x>
+      <y>585</y>
+      <width>50</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>E2</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnS2">
+    <property name="geometry">
+     <rect>
+      <x>780</x>
+      <y>640</y>
+      <width>50</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>S2</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnSp">
+    <property name="geometry">
+     <rect>
+      <x>725</x>
+      <y>640</y>
+      <width>50</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>S'</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnS">
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>640</y>
+      <width>50</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>S</string>
     </property>
    </widget>
   </widget>
