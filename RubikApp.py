@@ -200,19 +200,6 @@ class RubikApp(QMainWindow, Ui_MainWindow):
                 self.processScreen()
             self.cube.solution += "\n"
 
-    def isValid(self):
-        # Determine if all required pieces exist.
-        return locateEdge(self.cube, "Y", "G") and locateEdge(self.cube, "Y", "O") and \
-               locateEdge(self.cube, "Y", "B") and locateEdge(self.cube, "Y", "R") and \
-               locateEdge(self.cube, "G", "O") and locateEdge(self.cube, "O", "B") and \
-               locateEdge(self.cube, "B", "R") and locateEdge(self.cube, "R", "G") and \
-               locateEdge(self.cube, "W", "G") and locateEdge(self.cube, "W", "O") and \
-               locateEdge(self.cube, "W", "B") and locateEdge(self.cube, "W", "R") and \
-               locateCorner(self.cube, "Y", "O", "G") and locateCorner(self.cube, "Y", "B", "O") and \
-               locateCorner(self.cube, "Y", "R", "B") and locateCorner(self.cube, "Y", "G", "R") and \
-               locateCorner(self.cube, "W", "G", "O") and locateCorner(self.cube, "W", "O", "B") and \
-               locateCorner(self.cube, "W", "B", "R") and locateCorner(self.cube, "W", "R", "G")
-
     def blank(self):
         self.cube.scramble = ""
         self.cube.solution = ""
@@ -223,41 +210,37 @@ class RubikApp(QMainWindow, Ui_MainWindow):
         self.update()
 
     def scramble(self):
-        if self.isValid():
-            # Prepare cube.
-            self.setLock(False)
-            self.cube.scramble = ""
-            self.cube.solution = ""
-            self.default()
-            scramble = []
-            choice = random.choice(self.cube.moves)
+        # Prepare cube.
+        self.setLock(False)
+        self.cube.scramble = ""
+        self.cube.solution = ""
+        self.default()
+        scramble = []
+        choice = random.choice(self.cube.moves)
 
-            # Make 20 random moves.
-            for i in range(20):
-                # Update scramble.
-                scramble.append(choice.__name__)
+        # Make 20 random moves.
+        for i in range(20):
+            # Update scramble.
+            scramble.append(choice.__name__)
 
-                # Make the move, and update the screen.
-                self.cube.scramble += choice.__name__.replace("p", "'") + " "
-                choice(self.cube.puz)
-                self.processScreen()
+            # Make the move, and update the screen.
+            self.cube.scramble += choice.__name__.replace("p", "'") + " "
+            choice(self.cube.puz)
+            self.processScreen()
 
-                # Make a new random choice. Ensure the same face isn't selected.
-                choice = random.choice([move for move in self.cube.moves if move.__name__[0] != choice.__name__[0]])
-            self.setLock(True)
-        else:
-            self.cube.scramble = "Cube in an invalid state. Reverted to solved state."
-            self.default()
+            # Make a new random choice. Ensure the same face isn't selected.
+            choice = random.choice([move for move in self.cube.moves if move.__name__[0] != choice.__name__[0]])
+        self.setLock(True)
 
     def solve(self):
-        if self.isValid():
-            # Prepare cube.
-            self.setLock(False)
-            self.cube.solution = ""
-            self.cube.solLen = 0
-            self.proDone.setValue(0)
-            self.proDone.show()
+        # Prepare cube.
+        self.setLock(False)
+        self.cube.solution = ""
+        self.cube.solLen = 0
+        self.proDone.setValue(0)
+        self.proDone.show()
 
+        try:
             # Bottom edges.
             self.cube.solution += "=== Bottom Edges ===\n"
             self.execute(algsYG[locateEdge(self.cube, "Y", "G")])
@@ -315,12 +298,17 @@ class RubikApp(QMainWindow, Ui_MainWindow):
 
             # Print solution.
             self.cube.solution += "\nSolution found in {} moves.".format(self.cube.solLen)
-            self.update()
-            self.setLock(True)
-            self.proDone.hide()
-        else:
-            self.cube.solution = "Cube in an invalid state. Reverted to solved state."
+
+        except KeyError:
+            self.cube.solution += "An impossible state was encountered while attempting to solve this step.\n"
+            self.cube.solution += "On a physical cube, this is typically the result of swapping stickers.\n"
+            self.cube.solution += "Cube reverted to solved state."
             self.default()
+
+        finally:
+            self.update()
+            self.proDone.hide()
+            self.setLock(True)
 
 if __name__ == "__main__":
     currentApp = QApplication(sys.argv)

@@ -46,11 +46,13 @@ class Cube:
 
     def execute(self, algorithm):
         # Perform each operation in the algorithm.
+        self.solLen += len(algorithm)
         for move in algorithm:
             move(self.puz)
 
     def scramble_(self):
         # Make 20 random moves.
+        self.solLen = 0
         choice = random.choice(self.moves)
         for i in range(20):
             choice(self.puz)
@@ -79,6 +81,7 @@ class Cube:
 if __name__ == "__main__":
     cube = Cube()
     times = []
+    moves = []
 
     # Stress test. Solve several cubes and print the average time.
     for i in range(1000):
@@ -87,5 +90,10 @@ if __name__ == "__main__":
         cube.solve()
         end = time.time()
         times.append(end - start)
-        print("Solved in {} seconds.".format(end - start))
-    print("Solved {} cubes in an average of {} seconds.".format(i + 1, sum(times) / len(times)))
+        moves.append(cube.solLen)
+        print("Solved cube #" + str(i + 1).zfill(4) + " in %.6f seconds, with " % (end - start) + str(cube.solLen).zfill(3) + " moves.")
+    print("\nSolved {} cubes in {} seconds, using a total of {} moves.".format(i + 1, sum(times), sum(moves)))
+    print("Average time: {} seconds.".format(sum(times) / len(times)))
+    print("Average moves: {}.".format(sum(moves) / len(moves)))
+    print("Times ranged from {} to {} seconds.".format(min(times), max(times)))
+    print("Moves ranged from {} to {}.".format(min(moves), max(moves)))
