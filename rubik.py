@@ -46,6 +46,7 @@ class Cube:
         # Scramble / Solution data.
         self.scramble = ""
         self.solution = ""
+        self.algorithm = []
         self.solLen = 0
 
     def __str__(self):
@@ -86,18 +87,18 @@ class Cube:
         self.setOrientation()
 
         # Fetch the proper algorithm at each step and execute it.
-        self.execute(algsYG[locateEdge(self, self.cD, self.cF)])
-        self.execute(algsYO[locateEdge(self, self.cD, self.cL)])
-        self.execute(algsYB[locateEdge(self, self.cD, self.cB)])
-        self.execute(algsYR[locateEdge(self, self.cD, self.cR)])
-        self.execute(algsYOG[locateCorner(self, self.cD, self.cL, self.cF)])
-        self.execute(algsYBO[locateCorner(self, self.cD, self.cB, self.cL)])
-        self.execute(algsYRB[locateCorner(self, self.cD, self.cR, self.cB)])
-        self.execute(algsYGR[locateCorner(self, self.cD, self.cF, self.cR)])
-        self.execute(algsGO[locateEdge(self, self.cF, self.cL)])
-        self.execute(algsOB[locateEdge(self, self.cL, self.cB)])
+        self.execute(algsDF[locateEdge(self, self.cD, self.cF)])
+        self.execute(algsDL[locateEdge(self, self.cD, self.cL)])
+        self.execute(algsDB[locateEdge(self, self.cD, self.cB)])
+        self.execute(algsDR[locateEdge(self, self.cD, self.cR)])
+        self.execute(algsDLF[locateCorner(self, self.cD, self.cL, self.cF)])
+        self.execute(algsDBL[locateCorner(self, self.cD, self.cB, self.cL)])
+        self.execute(algsDRB[locateCorner(self, self.cD, self.cR, self.cB)])
+        self.execute(algsDFR[locateCorner(self, self.cD, self.cF, self.cR)])
+        self.execute(algsFL[locateEdge(self, self.cF, self.cL)])
+        self.execute(algsLB[locateEdge(self, self.cL, self.cB)])
         self.execute(algsBR[locateEdge(self, self.cB, self.cR)])
-        self.execute(algsRG[locateEdge(self, self.cR, self.cF)])
+        self.execute(algsRF[locateEdge(self, self.cR, self.cF)])
         self.execute(algsEO[locateEdgeOri(self)])
         self.execute(algsCO[locateCornerOri(self)])
         self.execute(algsCP[locateCornerPerm(self)])

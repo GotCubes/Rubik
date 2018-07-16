@@ -1,3 +1,4 @@
+import re
 import sys
 from PySide.QtGui import *
 from rubikUI import *
@@ -227,14 +228,10 @@ class RubikApp(QMainWindow, Ui_MainWindow):
         self.cube.scramble = ""
         self.cube.solution = ""
         self.reset()
-        scramble = []
         choice = random.choice(self.cube.moves)
 
         # Make 20 random moves.
         for i in range(20):
-            # Update scramble.
-            scramble.append(choice.__name__)
-
             # Make the move, and update the screen.
             self.cube.scramble += choice.__name__.replace("p", "'") + " "
             choice(self.cube.puz)
@@ -256,35 +253,35 @@ class RubikApp(QMainWindow, Ui_MainWindow):
         try:
             # Bottom edges.
             self.cube.solution += "=== Bottom Edges ===\n"
-            self.execute(algsYG[locateEdge(self.cube, self.cube.cD, self.cube.cF)])
+            self.execute(algsDF[locateEdge(self.cube, self.cube.cD, self.cube.cF)])
             self.proDone.setValue(6)
-            self.execute(algsYO[locateEdge(self.cube, self.cube.cD, self.cube.cL)])
+            self.execute(algsDL[locateEdge(self.cube, self.cube.cD, self.cube.cL)])
             self.proDone.setValue(12)
-            self.execute(algsYB[locateEdge(self.cube, self.cube.cD, self.cube.cB)])
+            self.execute(algsDB[locateEdge(self.cube, self.cube.cD, self.cube.cB)])
             self.proDone.setValue(18)
-            self.execute(algsYR[locateEdge(self.cube, self.cube.cD, self.cube.cR)])
+            self.execute(algsDR[locateEdge(self.cube, self.cube.cD, self.cube.cR)])
             self.proDone.setValue(24)
 
             # Bottom corners.
             self.cube.solution += "\n=== Bottom Corners ===\n"
-            self.execute(algsYOG[locateCorner(self.cube, self.cube.cD, self.cube.cL, self.cube.cF)])
+            self.execute(algsDLF[locateCorner(self.cube, self.cube.cD, self.cube.cL, self.cube.cF)])
             self.proDone.setValue(30)
-            self.execute(algsYBO[locateCorner(self.cube, self.cube.cD, self.cube.cB, self.cube.cL)])
+            self.execute(algsDBL[locateCorner(self.cube, self.cube.cD, self.cube.cB, self.cube.cL)])
             self.proDone.setValue(36)
-            self.execute(algsYRB[locateCorner(self.cube, self.cube.cD, self.cube.cR, self.cube.cB)])
+            self.execute(algsDRB[locateCorner(self.cube, self.cube.cD, self.cube.cR, self.cube.cB)])
             self.proDone.setValue(42)
-            self.execute(algsYGR[locateCorner(self.cube, self.cube.cD, self.cube.cF, self.cube.cR)])
+            self.execute(algsDFR[locateCorner(self.cube, self.cube.cD, self.cube.cF, self.cube.cR)])
             self.proDone.setValue(48)
 
             # Middle edges.
             self.cube.solution += "\n=== Middle Edges ===\n"
-            self.execute(algsGO[locateEdge(self.cube, self.cube.cF, self.cube.cL)])
+            self.execute(algsFL[locateEdge(self.cube, self.cube.cF, self.cube.cL)])
             self.proDone.setValue(54)
-            self.execute(algsOB[locateEdge(self.cube, self.cube.cL, self.cube.cB)])
+            self.execute(algsLB[locateEdge(self.cube, self.cube.cL, self.cube.cB)])
             self.proDone.setValue(60)
             self.execute(algsBR[locateEdge(self.cube, self.cube.cB, self.cube.cR)])
             self.proDone.setValue(66)
-            self.execute(algsRG[locateEdge(self.cube, self.cube.cR, self.cube.cF)])
+            self.execute(algsRF[locateEdge(self.cube, self.cube.cR, self.cube.cF)])
             self.proDone.setValue(72)
 
             # Top edge orientation.

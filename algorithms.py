@@ -50,8 +50,8 @@ def locateFinalAlignment(cube):
     for edge in [(3, 4), (3, 7), (3, 10), (3, 1)]:
         if cube.puz[edge] == cube.cF: return edge
 
-# Yellow / Green edge.
-algsYG = {
+# DF edge.
+algsDF = {
             # Solved
             ((6, 4), (5, 4)): [],
 
@@ -85,8 +85,8 @@ algsYG = {
             ((3, 7), (1, 5)): [Rp, F]
          }
 
-# Yellow / Orange edge.
-algsYO = {
+# DL edge.
+algsDL = {
             # Solved
             ((7, 3), (5, 1)): [],
 
@@ -118,8 +118,8 @@ algsYO = {
             ((3, 7), (1, 5)): [U, Fp, L, F]
          }
 
-# Yellow / Blue edge.
-algsYB = {
+# DB edge.
+algsDB = {
             # Solved
             ((8, 4), (5, 10)): [],
 
@@ -149,8 +149,8 @@ algsYB = {
             ((3, 7), (1, 5)): [R, Bp]
          }
 
-# Yellow / Red edge.
-algsYR = {
+# DR edge.
+algsDR = {
             # Solved
             ((7, 5), (5, 7)): [],
 
@@ -178,8 +178,8 @@ algsYR = {
             ((3, 7), (1, 5)): [U, F, Rp, Fp]
          }
 
-# Yellow / Orange / Green corner.
-algsYOG = {
+# DLF corner.
+algsDLF = {
             # Solved
             ((6, 3), (5, 2), (5, 3)): [],
 
@@ -197,7 +197,7 @@ algsYOG = {
             ((5, 5), (5, 6), (6, 5)): [Fp, U2, F2, Up, Fp],
 
             # Top Layer
-            ((2, 3), (3, 3), (3, 2)): [F, U2, Fp, Up, F, U, Fp],
+            ((2, 3), (3, 3), (3, 2)): [F2, U, F2, Up, F2],
             ((3, 2), (2, 3), (3, 3)): [Lp, Up, L],
             ((3, 3), (3, 2), (2, 3)): [F, U, Fp],
             ((0, 3), (3, 0), (3, 11)): [L2, Fp, L2, F],
@@ -211,8 +211,8 @@ algsYOG = {
             ((3, 6), (3, 5), (2, 5)): [Lp, U, L]
           }
 
-# Yellow / Blue / Orange corner.
-algsYBO = {
+# DBL corner.
+algsDBL = {
             # Solved
             ((8, 3), (5, 11), (5, 0)): [],
 
@@ -230,7 +230,7 @@ algsYBO = {
             ((2, 3), (3, 3), (3, 2)): [U2, B2, Lp, B2, L],
             ((3, 2), (2, 3), (3, 3)): [U, Bp, Up, B],
             ((3, 3), (3, 2), (2, 3)): [Bp, U, B],
-            ((0, 3), (3, 0), (3, 11)): [L, U2, Lp, Up, L, U, Lp],
+            ((0, 3), (3, 0), (3, 11)): [L2, U, L2, Up, L2],
             ((3, 11), (0, 3), (3, 0)): [Bp, Up, B],
             ((3, 0), (3, 11), (0, 3)): [L, U, Lp],
             ((0, 5), (3, 9), (3, 8)): [B2, Lp, B2, L],
@@ -241,8 +241,8 @@ algsYBO = {
             ((3, 6), (3, 5), (2, 5)): [U2, L, U, Lp]
           }
 
-# Yellow / Red / Blue corner.
-algsYRB = {
+# DRB corner.
+algsDRB = {
             # Solved
             ((8, 5), (5, 8), (5, 9)): [],
 
@@ -260,7 +260,7 @@ algsYRB = {
             ((0, 3), (3, 0), (3, 11)): [U2, R2, Bp, R2, B],
             ((3, 11), (0, 3), (3, 0)): [U, Rp, Up, R],
             ((3, 0), (3, 11), (0, 3)): [U, B, U, Bp],
-            ((0, 5), (3, 9), (3, 8)): [Rp, U2, R, U, Rp, Up, R],
+            ((0, 5), (3, 9), (3, 8)): [B2, U, B2, Up, B2],
             ((3, 8), (0, 5), (3, 9)): [Rp, Up, R],
             ((3, 9), (3, 8), (0, 5)): [B, U, Bp],
             ((2, 5), (3, 6), (3, 5)): [R2, Bp, R2, B],
@@ -268,8 +268,8 @@ algsYRB = {
             ((3, 6), (3, 5), (2, 5)): [Up, B, U, Bp]
           }
 
-# Yellow / Green / Red corner.
-algsYGR = {
+# DFR corner.
+algsDFR = {
             # Solved
             ((6, 5), (5, 5), (5, 6)): [],
 
@@ -278,22 +278,22 @@ algsYGR = {
             ((5, 5), (5, 6), (6, 5)): [R, Up, Rp, Fp, Up, F],
 
             # Top Layer
-            ((2, 3), (3, 3), (3, 2)): [Up, R, U2, Rp, Up, R, U, Rp],
+            ((2, 3), (3, 3), (3, 2)): [Up, R2, U, R2, Up, R2],
             ((3, 2), (2, 3), (3, 3)): [R, Up, Rp],
             ((3, 3), (3, 2), (2, 3)): [Up, R, U, Rp],
-            ((0, 3), (3, 0), (3, 11)): [U2, R, U2, Rp, Up, R, U, Rp],
+            ((0, 3), (3, 0), (3, 11)): [U2, R2, U, R2, Up, R2],
             ((3, 11), (0, 3), (3, 0)): [U2, Fp, Up, F],
             ((3, 0), (3, 11), (0, 3)): [U2, R, U, Rp],
-            ((0, 5), (3, 9), (3, 8)): [U, R, U2, Rp, Up, R, U, Rp],
+            ((0, 5), (3, 9), (3, 8)): [U, R2, U, R2, Up, R2],
             ((3, 8), (0, 5), (3, 9)): [U, Fp, Up, F],
             ((3, 9), (3, 8), (0, 5)): [U, R, U, Rp],
-            ((2, 5), (3, 6), (3, 5)): [R, U2, Rp, Up, R, U, Rp],
+            ((2, 5), (3, 6), (3, 5)): [R2, U, R2, Up, R2],
             ((3, 5), (2, 5), (3, 6)): [Fp, Up, F],
             ((3, 6), (3, 5), (2, 5)): [R, U, Rp]
           }
 
-# Green / Orange edge.
-algsGO = {
+# FL edge.
+algsFL = {
             # Solved
             ((4, 3), (4, 2)): [],
 
@@ -317,8 +317,8 @@ algsGO = {
             ((3, 7), (1, 5)): [Lp, U, L, U, F, Up, Fp]
          }
 
-# Orange / Blue edge.
-algsOB = {
+# LB edge.
+algsLB = {
             # Solved
             ((4, 0), (4, 11)): [],
 
@@ -340,7 +340,7 @@ algsOB = {
             ((3, 7), (1, 5)): [U, Bp, U, B, U, L, Up, Lp]
          }
 
-# Blue / Red edge.
+# BR edge.
 algsBR = {
             # Solved
             ((4, 9), (4, 8)): [],
@@ -361,8 +361,8 @@ algsBR = {
             ((3, 7), (1, 5)): [U2, Rp, U, R, U, B, Up, Bp]
          }
 
-# Red / Green edge.
-algsRG = {
+# RF edge.
+algsRF = {
             # Solved
             ((4, 6), (4, 5)): [],
 
